@@ -36,6 +36,13 @@ buscacursos.fetch(query).then(courses => {
     // ...
   });
 });
+
+// Make the requests faster skipping additional requests
+buscacursos.fetch(query, { skipRequisites: true, skipInformation: true }).then(courses => {
+  courses.forEach(course => {
+    // ...
+  });
+});
 ```
 
 ### Query

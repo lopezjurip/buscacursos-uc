@@ -25,6 +25,7 @@
   "homepage": "https://github.com/mrpatiwi/uc-courses#readme",
   "dependencies": {
     "asyncawait": "^1.0.1",
+    "bluebird": "^3.1.1",
     "cheerio": "^0.19.0",
     "request-promise": "^1.0.2"
   },

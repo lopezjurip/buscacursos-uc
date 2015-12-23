@@ -2,6 +2,7 @@
 
 const chai = require('chai');
 const should = chai.should();
+const expect = chai.expect;
 
 const buscacursos = require('../index');
 const Course = require('../lib/course');
@@ -135,6 +136,37 @@ describe('buscacursos', function() {
       }
       arq.should.be.true;
       art.should.be.true;
+      done();
+    }).catch(done);
+  });
+
+  it('should skip unwanted information request', done => {
+    buscacursos.fetch(cases.generic, { skipInformation: true }).then(results => {
+      results.forEach(course => {
+        course.should.be.instanceof(Course);
+        expect(course.information).to.be.null;
+      })
+      done();
+    }).catch(done);
+  });
+
+  it('should skip unwanted requisites request', done => {
+    buscacursos.fetch(cases.generic, { skipRequisites: true }).then(results => {
+      results.forEach(course => {
+        course.should.be.instanceof(Course);
+        expect(course.requisites).to.be.null;
+      })
+      done();
+    }).catch(done);
+  });
+
+  it('should skip unwanted requisites and information requests', done => {
+    buscacursos.fetch(cases.generic, { skipRequisites: true, skipInformation: true }).then(results => {
+      results.forEach(course => {
+        course.should.be.instanceof(Course);
+        expect(course.requisites).to.be.null;
+        expect(course.information).to.be.null;
+      })
       done();
     }).catch(done);
   });
