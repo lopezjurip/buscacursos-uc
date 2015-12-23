@@ -113,13 +113,13 @@ The results are from page of at most 50 courses. The `Promimse` returns an array
     "CAT": {
       "modules": {
         "L": [
-          "3"
+          3
         ],
         "W": [
-          "3"
+          3
         ],
         "V": [
-          "3"
+          3
         ]
       },
       "location": {
@@ -130,7 +130,7 @@ The results are from page of at most 50 courses. The `Promimse` returns an array
     "AYUD": {
       "modules": {
         "L": [
-          "4"
+          4
         ]
       },
       "location": {
@@ -196,8 +196,8 @@ The results are from page of at most 50 courses. The `Promimse` returns an array
     "CAT": {
       "modules": {
         "M": [
-          "4",
-          "5"
+          4,
+          5
         ]
       },
       "location": {
