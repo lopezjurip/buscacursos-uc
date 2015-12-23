@@ -94,6 +94,16 @@ describe('buscacursos', function() {
     }).catch(done);
   });
 
+  it('should fetch course with valid restrictions', done => {
+    buscacursos.fetch(cases.restrictions).then(results => {
+      results.forEach(course => {
+        course.requisites.restrictions.should.be.instanceof(Array);
+        course.requisites.restrictions.should.not.be.empty;
+      });
+      done();
+    });
+  });
+
   it('should fetch course with valid corequisites', done => {
     buscacursos.fetch(cases.corequisites).then(results => {
       // Expected: (FIS1503 y MAT1203) o (MAT1202 y MAT1620(c)) o (FIS1513(c) y MAT1512(c)) o FIS1513(c) o ICE1513(c)
@@ -130,7 +140,6 @@ describe('buscacursos', function() {
       let art = false;
       for (let i = 0; i < results.length; i++) {
         const course = results[i];
-        console.log(course.school);
         if (course.school.toLowerCase() === 'arte') art = true;
         if (course.school.toLowerCase() === 'arquitectura') arq = true;
       }
