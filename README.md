@@ -26,13 +26,17 @@ const query = {
   'cxml_sigla': 'FIS0151',
 };
 
+function toJSON(course) {
+  return JSON.stringify(course, null, 4);
+}
+
 // It's a Promise!
 buscacursos.fetch(query).then(courses => {
   courses.forEach(course => {
     const initials = course.initials;
     const vacancy = course.vacancy;
     const credits = course.credits;
-    console.log(course);
+    console.log(toJSON(course));
     // ...
   });
 });
@@ -154,7 +158,7 @@ The results are from page of at most 50 courses. The `Promimse` returns an array
       }]
     ],
     "relation": null,
-    "restrictions": null,
+    "restrictions": [],
     "equivalences": [{
       "initials": "ICE1003"
     }, {
@@ -162,6 +166,68 @@ The results are from page of at most 50 courses. The `Promimse` returns an array
     }, {
       "initials": "ICM1022"
     }]
+  }
+}
+```
+
+### Example with restrictions
+
+```json
+{
+  "year": 2016,
+  "period": 1,
+  "NRC": 15168,
+  "initials": "IIC3695",
+  "droppable": true,
+  "english": false,
+  "section": 1,
+  "specialApproval": false,
+  "name": "Tópicos Avanzados en Inteligencia de Máquina",
+  "teachers": [{
+    "name": "Pichara Karim",
+    "photoURL": "http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Pichara%20Karim&semestre=2016-1&sigla=IIC3695&seccion=1"
+  }],
+  "credits": 10,
+  "vacancy": {
+    "total": 30,
+    "available": 16
+  },
+  "schedule": {
+    "CAT": {
+      "modules": {
+        "M": [
+          "4",
+          "5"
+        ]
+      },
+      "location": {
+        "campus": "San Joaquin",
+        "place": null
+      }
+    }
+  },
+  "school": "Ingeniería",
+  "information": "Descripción no disponible para este curso.",
+  "requisites": {
+    "prerequisites": [
+      [{
+        "initials": "EYP1113"
+      }, {
+        "initials": "IIC1103"
+      }]
+    ],
+    "relation": "or",
+    "restrictions": [{
+      "type": "Carrera",
+      "value": "Mag.En Cs Ingenieria"
+    }, {
+      "type": "Carrera",
+      "value": "Doct Cs Ingenieria"
+    }, {
+      "type": "Carrera",
+      "value": "Mag Ingenieria"
+    }],
+    "equivalences": []
   }
 }
 ```
