@@ -118,4 +118,24 @@ describe('buscacursos', function() {
       done();
     }).catch(done);
   });
+
+  it('should parse results divided by multiple headers', done => {
+    const query = {
+      'cxml_semestre': '2016-1',
+      'cxml_sigla': 'AR', // returns resutls from 'Arquitectura' and 'Arte'
+    };
+    buscacursos.fetch(query).then(results => {
+      let arq = false;
+      let art = false;
+      for (let i = 0; i < results.length; i++) {
+        const course = results[i];
+        console.log(course.school);
+        if (course.school.toLowerCase() === 'arte') art = true;
+        if (course.school.toLowerCase() === 'arquitectura') arq = true;
+      }
+      arq.should.be.true;
+      art.should.be.true;
+      done();
+    }).catch(done);
+  });
 });
