@@ -1,6 +1,6 @@
 {
   "name": "buscacursos-uc",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Buscacursos UC client",
   "main": "index.js",
   "scripts": {
