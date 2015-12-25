@@ -85,10 +85,10 @@ describe('buscacursos', function() {
       const course = results[0];
       const equivalences = course.requisites.equivalences;
       equivalences.should.eql([
-        { initials: 'ENT2510' },
-        { initials: 'ENT2520' },
-        { initials: 'ENT2526' },
-        { initials: 'ENT2532' },
+        'ENT2510',
+        'ENT2520',
+        'ENT2526',
+        'ENT2532',
       ])
       done();
     }).catch(done);
@@ -109,23 +109,43 @@ describe('buscacursos', function() {
       // Expected: (FIS1503 y MAT1203) o (MAT1202 y MAT1620(c)) o (FIS1513(c) y MAT1512(c)) o FIS1513(c) o ICE1513(c)
       // See: http://catalogo.uc.cl/index.php?tmpl=component&option=com_catalogo&view=requisitos&sigla=FIS0151
       const course = results[0];
-      const prerequisites = course.requisites.prerequisites;
-      prerequisites.should.eql([
-        [
-          { initials: 'FIS1503' },
-          { initials: 'MAT1203' },
-        ], [
-          { initials: 'MAT1202' },
-          { initials: 'MAT1620', corequisite: true },
-        ], [
-          { initials: 'FIS1513', corequisite: true },
-          { initials: 'MAT1512', corequisite: true },
-        ], [
-          { initials: 'FIS1513', corequisite: true },
-        ], [
-          { initials: 'ICE1513', corequisite: true },
-        ],
-      ]);
+      const requirements = course.requisites.requirements;
+      requirements.should.eql([
+            {
+                prerequisites: [
+                    "FIS1503",
+                    "MAT1203"
+                ],
+                corequisites: []
+            },
+            {
+                prerequisites: [
+                    "MAT1202"
+                ],
+                corequisites: [
+                    "MAT1620"
+                ]
+            },
+            {
+                prerequisites: [],
+                corequisites: [
+                    "FIS1513",
+                    "MAT1512"
+                ]
+            },
+            {
+                prerequisites: [],
+                corequisites: [
+                    "FIS1513"
+                ]
+            },
+            {
+                prerequisites: [],
+                corequisites: [
+                    "ICE1513"
+                ]
+            }
+        ]);
       done();
     }).catch(done);
   });
