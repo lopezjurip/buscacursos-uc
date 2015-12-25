@@ -1,4 +1,4 @@
-const buscacursos = require('buscacursos-uc');
+const buscacursos = require('..');
 
 const query = {
   'cxml_semestre': '2016-1',

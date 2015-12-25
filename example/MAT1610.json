@@ -1,0 +1,103 @@
+{
+    "year":2016,
+    "period":1,
+    "NRC":14778,
+    "initials":"MAT1610",
+    "droppable":true,
+    "english":false,
+    "section":1,
+    "specialApproval":false,
+    "name":"Cálculo I",
+    "teachers":[
+        {
+            "name":"Hirsh Eduardo",
+            "photoURL":"http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Hirsh%20Eduardo&semestre=2016-1&sigla=MAT1610&seccion=1"
+        },
+        {
+            "name":"Cortes Victor",
+            "photoURL":"http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Cortes%20Victor&semestre=2016-1&sigla=MAT1610&seccion=1"
+        }
+    ],
+    "credits":10,
+    "vacancy":{
+        "total":75,
+        "available":71
+    },
+    "schedule":{
+        "CAT":{
+            "modules":{
+                "L":[
+                    4
+                ],
+                "W":[
+                    4
+                ],
+                "V":[
+                    4
+                ]
+            },
+            "location":{
+                "campus":"San Joaquin",
+                "place":null
+            }
+        },
+        "AYUD":{
+            "modules":{
+                "L":[
+                    5
+                ]
+            },
+            "location":{
+                "campus":"San Joaquin",
+                "place":null
+            }
+        },
+        "LAB":{
+            "modules":{
+                "W":[
+                    5
+                ]
+            },
+            "location":{
+                "campus":"San Joaquin",
+                "place":null
+            }
+        }
+    },
+    "school":"Matemática",
+    "information":"El curso se orienta a entregar los conceptos básicos de límites y continuidad de funciones, de la derivada de una función y su interpretación geométrica, en conjunto con los mecanismos y técnicas de derivación, las aplicaciones más relevantes de la derivada a problemas diversos de las matemáticas y la física, la obtención de puntos críticos de una función, la definición de la Integral, el cálculo de integrales mediante primitivas, y las técnicas de integración.",
+    "requisites":{
+        "requirements":[
+            {
+                "prerequisites":[
+                    "MAT1600"
+                ],
+                "corequisites":[
+
+                ]
+            }
+        ],
+        "relation":"or",
+        "restrictions":[
+            {
+                "type":"Programa",
+                "value":"Lic en Fisica"
+            },
+            {
+                "type":"Programa",
+                "value":"Lic en Astronomia"
+            },
+            {
+                "type":"Carrera",
+                "value":"Ingenieria"
+            },
+            {
+                "type":"Programa",
+                "value":"Lic en Astronomia"
+            }
+        ],
+        "equivalences":[
+
+        ]
+    }
+}

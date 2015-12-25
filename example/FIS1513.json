@@ -1,0 +1,84 @@
+{
+    "year":2016,
+    "period":1,
+    "NRC":14444,
+    "initials":"FIS1513",
+    "droppable":true,
+    "english":false,
+    "section":1,
+    "specialApproval":false,
+    "name":"Estática y Dinámica",
+    "teachers":[
+        {
+            "name":"Garcia Griselda",
+            "photoURL":"http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Garcia%20Griselda&semestre=2016-1&sigla=FIS1513&seccion=1"
+        }
+    ],
+    "credits":10,
+    "vacancy":{
+        "total":130,
+        "available":10
+    },
+    "schedule":{
+        "CAT":{
+            "modules":{
+                "L":[
+                    3
+                ],
+                "W":[
+                    3
+                ],
+                "V":[
+                    3
+                ]
+            },
+            "location":{
+                "campus":"San Joaquin",
+                "place":null
+            }
+        },
+        "AYUD":{
+            "modules":{
+                "L":[
+                    4
+                ]
+            },
+            "location":{
+                "campus":"San Joaquin",
+                "place":null
+            }
+        }
+    },
+    "school":"Física",
+    "information":"El curso presenta los principios fundamentales para el estudio de la estática y dinámica de sistemas mecánicos y estructurales discretos rígidos y deformables. El curso se basa en la aplicación de los tres pilares fundamentales de la mecánica clásica: la cinemática, el equilibrio, y las leyes constitutivas. El curso comienza con el estudio detallado de la cinemática del movimiento de partículas, sistemas de partículas y cuerpos. Se plantean luego las leyes y ecuaciones constitutivas fundamentales que relacionan la cinemática con las fuerzas que actúan sobre los cuerpos, conjuntamente con los principios fundamentales de energía mecánica y trabajo. Utilizando, la cinemática y las leyes constitutivas, se estudian distintas herramientas para plantear el equilibrio de los sistemas mecánicos y estructurales, con énfasis en los principios de energía y trabajos virtuales. El curso enfatiza la construcción y análisis de modelos físicos y matemáticos de sistemas mecánicos y estructurales reales.",
+    "requisites":{
+        "requirements":[
+            {
+                "prerequisites":[
+                    "FIS1503",
+                    "MAT1203"
+                ],
+                "corequisites":[
+                    "MAT1620"
+                ]
+            },
+            {
+                "prerequisites":[
+                    "MAT1610"
+                ],
+                "corequisites":[
+                    "MAT1203"
+                ]
+            }
+        ],
+        "relation":null,
+        "restrictions":[
+
+        ],
+        "equivalences":[
+            "ICE1003",
+            "ICE1513",
+            "ICM1022"
+        ]
+    }
+}
