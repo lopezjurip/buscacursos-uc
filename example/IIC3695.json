@@ -1,69 +1,71 @@
-{
-    "year":2016,
-    "period":1,
-    "NRC":15168,
-    "initials":"IIC3695",
-    "droppable":true,
-    "english":false,
-    "section":1,
-    "specialApproval":false,
-    "name":"Tópicos Avanzados en Inteligencia de Máquina",
-    "teachers":[
-        {
-            "name":"Pichara Karim",
-            "photoURL":"http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Pichara%20Karim&semestre=2016-1&sigla=IIC3695&seccion=1"
-        }
-    ],
-    "credits":10,
-    "vacancy":{
-        "total":30,
-        "available":16
-    },
-    "schedule":{
-        "CAT":{
-            "modules":{
-                "M":[
-                    4,
-                    5
-                ]
-            },
-            "location":{
-                "campus":"San Joaquin",
-                "place":null
-            }
-        }
-    },
-    "school":"Ingeniería",
-    "information":"Descripción no disponible para este curso.",
-    "requisites":{
-        "requirements":[
+[
+    {
+        "year": 2016,
+        "period": 1,
+        "NRC": 15168,
+        "initials": "IIC3695",
+        "droppable": true,
+        "english": false,
+        "section": 1,
+        "specialApproval": false,
+        "name": "Tópicos Avanzados en Inteligencia de Máquina",
+        "teachers": [
             {
-                "prerequisites":[
-                    "EYP1113",
-                    "IIC1103"
-                ],
-                "corequisites":[
-
+                "name": "Pichara Karim",
+                "photoURL": "http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Pichara%20Karim&semestre=2016-1&sigla=IIC3695&seccion=1"
+            }
+        ],
+        "credits": 10,
+        "vacancy": {
+            "total": 30,
+            "available": 14
+        },
+        "schedule": [
+            {
+                "identifier": "CAT",
+                "location": {
+                    "campus": "San Joaquin",
+                    "place": null
+                },
+                "modules": [
+                    {
+                        "day": "M",
+                        "hours": [
+                            4,
+                            5
+                        ]
+                    }
                 ]
             }
         ],
-        "relation":"or",
-        "restrictions":[
-            {
-                "type":"Carrera",
-                "value":"Mag.En Cs Ingenieria"
-            },
-            {
-                "type":"Carrera",
-                "value":"Doct Cs Ingenieria"
-            },
-            {
-                "type":"Carrera",
-                "value":"Mag Ingenieria"
-            }
-        ],
-        "equivalences":[
-
-        ]
+        "school": "Ingeniería",
+        "information": "Descripción no disponible para este curso.",
+        "requisites": {
+            "requirements": [
+                {
+                    "prerequisites": [
+                        "EYP1113",
+                        "IIC1103"
+                    ],
+                    "corequisites": []
+                }
+            ],
+            "relation": "or",
+            "restrictions": [
+                {
+                    "type": "Carrera",
+                    "value": "Mag.En Cs Ingenieria"
+                },
+                {
+                    "type": "Carrera",
+                    "value": "Doct Cs Ingenieria"
+                },
+                {
+                    "type": "Carrera",
+                    "value": "Mag Ingenieria"
+                }
+            ],
+            "equivalences": []
+        }
     }
-}
+]

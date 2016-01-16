@@ -89,198 +89,104 @@ The results are from page of at most 50 courses. The `Promimse` returns an array
 ### Example
 
 ```json
-{
-    "year":2016,
-    "period":1,
-    "NRC":14444,
-    "initials":"FIS1513",
-    "droppable":true,
-    "english":false,
-    "section":1,
-    "specialApproval":false,
-    "name":"Estática y Dinámica",
-    "teachers":[
-        {
-            "name":"Garcia Griselda",
-            "photoURL":"http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Garcia%20Griselda&semestre=2016-1&sigla=FIS1513&seccion=1"
-        }
-    ],
-    "credits":10,
-    "vacancy":{
-        "total":130,
-        "available":10
-    },
-    "schedule":{
-        "CAT":{
-            "modules":{
-                "L":[
-                    3
-                ],
-                "W":[
-                    3
-                ],
-                "V":[
-                    3
-                ]
-            },
-            "location":{
-                "campus":"San Joaquin",
-                "place":null
+[
+    {
+        "year": 2015,
+        "period": 2,
+        "NRC": 16146,
+        "initials": "FIS1513",
+        "droppable": true,
+        "english": false,
+        "section": 1,
+        "specialApproval": false,
+        "name": "Estática y Dinámica",
+        "teachers": [
+            {
+                "name": "Reyes Sebastian",
+                "photoURL": "http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Reyes%20Sebastian&semestre=2015-2&sigla=FIS1513&seccion=1"
             }
+        ],
+        "credits": 10,
+        "vacancy": {
+            "total": 153,
+            "available": 30
         },
-        "AYUD":{
-            "modules":{
-                "L":[
-                    4
+        "schedule": [
+            {
+                "identifier": "CAT",
+                "location": {
+                    "campus": "San Joaquin",
+                    "place": "A1"
+                },
+                "modules": [
+                    {
+                        "day": "L",
+                        "hours": [
+                            2
+                        ]
+                    },
+                    {
+                        "day": "W",
+                        "hours": [
+                            2
+                        ]
+                    },
+                    {
+                        "day": "V",
+                        "hours": [
+                            2
+                        ]
+                    }
                 ]
             },
-            "location":{
-                "campus":"San Joaquin",
-                "place":null
+            {
+                "identifier": "AYUD",
+                "location": {
+                    "campus": "San Joaquin",
+                    "place": "A1"
+                },
+                "modules": [
+                    {
+                        "day": "J",
+                        "hours": [
+                            6
+                        ]
+                    }
+                ]
             }
+        ],
+        "school": "Física",
+        "information": "El curso presenta los principios fundamentales para el estudio de la estática y dinámica de sistemas mecánicos y estructurales discretos rígidos y deformables. El curso se basa en la aplicación de los tres pilares fundamentales de la mecánica clásica: la cinemática, el equilibrio, y las leyes constitutivas. El curso comienza con el estudio detallado de la cinemática del movimiento de partículas, sistemas de partículas y cuerpos. Se plantean luego las leyes y ecuaciones constitutivas fundamentales que relacionan la cinemática con las fuerzas que actúan sobre los cuerpos, conjuntamente con los principios fundamentales de energía mecánica y trabajo. Utilizando, la cinemática y las leyes constitutivas, se estudian distintas herramientas para plantear el equilibrio de los sistemas mecánicos y estructurales, con énfasis en los principios de energía y trabajos virtuales. El curso enfatiza la construcción y análisis de modelos físicos y matemáticos de sistemas mecánicos y estructurales reales.",
+        "requisites": {
+            "requirements": [
+                {
+                    "prerequisites": [
+                        "FIS1503",
+                        "MAT1203"
+                    ],
+                    "corequisites": [
+                        "MAT1620"
+                    ]
+                },
+                {
+                    "prerequisites": [
+                        "MAT1610"
+                    ],
+                    "corequisites": [
+                        "MAT1203"
+                    ]
+                }
+            ],
+            "relation": null,
+            "restrictions": [],
+            "equivalences": [
+                "ICE1003",
+                "ICE1513",
+                "ICM1022"
+            ]
         }
-    },
-    "school":"Física",
-    "information":"El curso presenta los principios fundamentales para el estudio de la estática y dinámica de sistemas mecánicos y estructurales discretos rígidos y deformables. El curso se basa en la aplicación de los tres pilares fundamentales de la mecánica clásica: la cinemática, el equilibrio, y las leyes constitutivas. El curso comienza con el estudio detallado de la cinemática del movimiento de partículas, sistemas de partículas y cuerpos. Se plantean luego las leyes y ecuaciones constitutivas fundamentales que relacionan la cinemática con las fuerzas que actúan sobre los cuerpos, conjuntamente con los principios fundamentales de energía mecánica y trabajo. Utilizando, la cinemática y las leyes constitutivas, se estudian distintas herramientas para plantear el equilibrio de los sistemas mecánicos y estructurales, con énfasis en los principios de energía y trabajos virtuales. El curso enfatiza la construcción y análisis de modelos físicos y matemáticos de sistemas mecánicos y estructurales reales.",
-    "requisites":{
-        "requirements":[
-            {
-                "prerequisites":[
-                    "FIS1503",
-                    "MAT1203"
-                ],
-                "corequisites":[
-                    "MAT1620"
-                ]
-            },
-            {
-                "prerequisites":[
-                    "MAT1610"
-                ],
-                "corequisites":[
-                    "MAT1203"
-                ]
-            }
-        ],
-        "relation":null,
-        "restrictions":[
-
-        ],
-        "equivalences":[
-            "ICE1003",
-            "ICE1513",
-            "ICM1022"
-        ]
     }
-}
-```
-
-### Example with restrictions
-
-```json
-{
-    "year":2016,
-    "period":1,
-    "NRC":14778,
-    "initials":"MAT1610",
-    "droppable":true,
-    "english":false,
-    "section":1,
-    "specialApproval":false,
-    "name":"Cálculo I",
-    "teachers":[
-        {
-            "name":"Hirsh Eduardo",
-            "photoURL":"http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Hirsh%20Eduardo&semestre=2016-1&sigla=MAT1610&seccion=1"
-        },
-        {
-            "name":"Cortes Victor",
-            "photoURL":"http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Cortes%20Victor&semestre=2016-1&sigla=MAT1610&seccion=1"
-        }
-    ],
-    "credits":10,
-    "vacancy":{
-        "total":75,
-        "available":71
-    },
-    "schedule":{
-        "CAT":{
-            "modules":{
-                "L":[
-                    4
-                ],
-                "W":[
-                    4
-                ],
-                "V":[
-                    4
-                ]
-            },
-            "location":{
-                "campus":"San Joaquin",
-                "place":null
-            }
-        },
-        "AYUD":{
-            "modules":{
-                "L":[
-                    5
-                ]
-            },
-            "location":{
-                "campus":"San Joaquin",
-                "place":null
-            }
-        },
-        "LAB":{
-            "modules":{
-                "W":[
-                    5
-                ]
-            },
-            "location":{
-                "campus":"San Joaquin",
-                "place":null
-            }
-        }
-    },
-    "school":"Matemática",
-    "information":"El curso se orienta a entregar los conceptos básicos de límites y continuidad de funciones, de la derivada de una función y su interpretación geométrica, en conjunto con los mecanismos y técnicas de derivación, las aplicaciones más relevantes de la derivada a problemas diversos de las matemáticas y la física, la obtención de puntos críticos de una función, la definición de la Integral, el cálculo de integrales mediante primitivas, y las técnicas de integración.",
-    "requisites":{
-        "requirements":[
-            {
-                "prerequisites":[
-                    "MAT1600"
-                ],
-                "corequisites":[
-
-                ]
-            }
-        ],
-        "relation":"or",
-        "restrictions":[
-            {
-                "type":"Programa",
-                "value":"Lic en Fisica"
-            },
-            {
-                "type":"Programa",
-                "value":"Lic en Astronomia"
-            },
-            {
-                "type":"Carrera",
-                "value":"Ingenieria"
-            },
-            {
-                "type":"Programa",
-                "value":"Lic en Astronomia"
-            }
-        ],
-        "equivalences":[
-
-        ]
-    }
-}
+]
 ```
 
 ## Testing

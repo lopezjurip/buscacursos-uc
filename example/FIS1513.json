@@ -1,84 +1,578 @@
-{
-    "year":2016,
-    "period":1,
-    "NRC":14444,
-    "initials":"FIS1513",
-    "droppable":true,
-    "english":false,
-    "section":1,
-    "specialApproval":false,
-    "name":"Estática y Dinámica",
-    "teachers":[
-        {
-            "name":"Garcia Griselda",
-            "photoURL":"http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Garcia%20Griselda&semestre=2016-1&sigla=FIS1513&seccion=1"
-        }
-    ],
-    "credits":10,
-    "vacancy":{
-        "total":130,
-        "available":10
-    },
-    "schedule":{
-        "CAT":{
-            "modules":{
-                "L":[
-                    3
-                ],
-                "W":[
-                    3
-                ],
-                "V":[
-                    3
-                ]
-            },
-            "location":{
-                "campus":"San Joaquin",
-                "place":null
+[
+    {
+        "year": 2015,
+        "period": 2,
+        "NRC": 16146,
+        "initials": "FIS1513",
+        "droppable": true,
+        "english": false,
+        "section": 1,
+        "specialApproval": false,
+        "name": "Estática y Dinámica",
+        "teachers": [
+            {
+                "name": "Reyes Sebastian",
+                "photoURL": "http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Reyes%20Sebastian&semestre=2015-2&sigla=FIS1513&seccion=1"
             }
+        ],
+        "credits": 10,
+        "vacancy": {
+            "total": 153,
+            "available": 30
         },
-        "AYUD":{
-            "modules":{
-                "L":[
-                    4
+        "schedule": [
+            {
+                "identifier": "CAT",
+                "location": {
+                    "campus": "San Joaquin",
+                    "place": "A1"
+                },
+                "modules": [
+                    {
+                        "day": "L",
+                        "hours": [
+                            2
+                        ]
+                    },
+                    {
+                        "day": "W",
+                        "hours": [
+                            2
+                        ]
+                    },
+                    {
+                        "day": "V",
+                        "hours": [
+                            2
+                        ]
+                    }
                 ]
             },
-            "location":{
-                "campus":"San Joaquin",
-                "place":null
+            {
+                "identifier": "AYUD",
+                "location": {
+                    "campus": "San Joaquin",
+                    "place": "A1"
+                },
+                "modules": [
+                    {
+                        "day": "J",
+                        "hours": [
+                            6
+                        ]
+                    }
+                ]
             }
+        ],
+        "school": "Física",
+        "information": "El curso presenta los principios fundamentales para el estudio de la estática y dinámica de sistemas mecánicos y estructurales discretos rígidos y deformables. El curso se basa en la aplicación de los tres pilares fundamentales de la mecánica clásica: la cinemática, el equilibrio, y las leyes constitutivas. El curso comienza con el estudio detallado de la cinemática del movimiento de partículas, sistemas de partículas y cuerpos. Se plantean luego las leyes y ecuaciones constitutivas fundamentales que relacionan la cinemática con las fuerzas que actúan sobre los cuerpos, conjuntamente con los principios fundamentales de energía mecánica y trabajo. Utilizando, la cinemática y las leyes constitutivas, se estudian distintas herramientas para plantear el equilibrio de los sistemas mecánicos y estructurales, con énfasis en los principios de energía y trabajos virtuales. El curso enfatiza la construcción y análisis de modelos físicos y matemáticos de sistemas mecánicos y estructurales reales.",
+        "requisites": {
+            "requirements": [
+                {
+                    "prerequisites": [
+                        "FIS1503",
+                        "MAT1203"
+                    ],
+                    "corequisites": [
+                        "MAT1620"
+                    ]
+                },
+                {
+                    "prerequisites": [
+                        "MAT1610"
+                    ],
+                    "corequisites": [
+                        "MAT1203"
+                    ]
+                }
+            ],
+            "relation": null,
+            "restrictions": [],
+            "equivalences": [
+                "ICE1003",
+                "ICE1513",
+                "ICM1022"
+            ]
         }
     },
-    "school":"Física",
-    "information":"El curso presenta los principios fundamentales para el estudio de la estática y dinámica de sistemas mecánicos y estructurales discretos rígidos y deformables. El curso se basa en la aplicación de los tres pilares fundamentales de la mecánica clásica: la cinemática, el equilibrio, y las leyes constitutivas. El curso comienza con el estudio detallado de la cinemática del movimiento de partículas, sistemas de partículas y cuerpos. Se plantean luego las leyes y ecuaciones constitutivas fundamentales que relacionan la cinemática con las fuerzas que actúan sobre los cuerpos, conjuntamente con los principios fundamentales de energía mecánica y trabajo. Utilizando, la cinemática y las leyes constitutivas, se estudian distintas herramientas para plantear el equilibrio de los sistemas mecánicos y estructurales, con énfasis en los principios de energía y trabajos virtuales. El curso enfatiza la construcción y análisis de modelos físicos y matemáticos de sistemas mecánicos y estructurales reales.",
-    "requisites":{
-        "requirements":[
+    {
+        "year": 2015,
+        "period": 2,
+        "NRC": 16147,
+        "initials": "FIS1513",
+        "droppable": true,
+        "english": false,
+        "section": 2,
+        "specialApproval": false,
+        "name": "Estática y Dinámica",
+        "teachers": [
             {
-                "prerequisites":[
-                    "FIS1503",
-                    "MAT1203"
-                ],
-                "corequisites":[
-                    "MAT1620"
+                "name": "Amigo Pia",
+                "photoURL": "http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Amigo%20Pia&semestre=2015-2&sigla=FIS1513&seccion=2"
+            }
+        ],
+        "credits": 10,
+        "vacancy": {
+            "total": 120,
+            "available": 47
+        },
+        "schedule": [
+            {
+                "identifier": "CAT",
+                "location": {
+                    "campus": "San Joaquin",
+                    "place": "A7"
+                },
+                "modules": [
+                    {
+                        "day": "L",
+                        "hours": [
+                            2
+                        ]
+                    },
+                    {
+                        "day": "W",
+                        "hours": [
+                            2
+                        ]
+                    },
+                    {
+                        "day": "V",
+                        "hours": [
+                            2
+                        ]
+                    }
                 ]
             },
             {
-                "prerequisites":[
-                    "MAT1610"
-                ],
-                "corequisites":[
-                    "MAT1203"
+                "identifier": "AYUD",
+                "location": {
+                    "campus": "San Joaquin",
+                    "place": "A7"
+                },
+                "modules": [
+                    {
+                        "day": "L",
+                        "hours": [
+                            5
+                        ]
+                    }
                 ]
             }
         ],
-        "relation":null,
-        "restrictions":[
-
+        "school": "Física",
+        "information": "El curso presenta los principios fundamentales para el estudio de la estática y dinámica de sistemas mecánicos y estructurales discretos rígidos y deformables. El curso se basa en la aplicación de los tres pilares fundamentales de la mecánica clásica: la cinemática, el equilibrio, y las leyes constitutivas. El curso comienza con el estudio detallado de la cinemática del movimiento de partículas, sistemas de partículas y cuerpos. Se plantean luego las leyes y ecuaciones constitutivas fundamentales que relacionan la cinemática con las fuerzas que actúan sobre los cuerpos, conjuntamente con los principios fundamentales de energía mecánica y trabajo. Utilizando, la cinemática y las leyes constitutivas, se estudian distintas herramientas para plantear el equilibrio de los sistemas mecánicos y estructurales, con énfasis en los principios de energía y trabajos virtuales. El curso enfatiza la construcción y análisis de modelos físicos y matemáticos de sistemas mecánicos y estructurales reales.",
+        "requisites": {
+            "requirements": [
+                {
+                    "prerequisites": [
+                        "FIS1503",
+                        "MAT1203"
+                    ],
+                    "corequisites": [
+                        "MAT1620"
+                    ]
+                },
+                {
+                    "prerequisites": [
+                        "MAT1610"
+                    ],
+                    "corequisites": [
+                        "MAT1203"
+                    ]
+                }
+            ],
+            "relation": null,
+            "restrictions": [],
+            "equivalences": [
+                "ICE1003",
+                "ICE1513",
+                "ICM1022"
+            ]
+        }
+    },
+    {
+        "year": 2015,
+        "period": 2,
+        "NRC": 16148,
+        "initials": "FIS1513",
+        "droppable": true,
+        "english": false,
+        "section": 3,
+        "specialApproval": false,
+        "name": "Estática y Dinámica",
+        "teachers": [
+            {
+                "name": "Reyes Ignacio",
+                "photoURL": "http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Reyes%20Ignacio&semestre=2015-2&sigla=FIS1513&seccion=3"
+            }
         ],
-        "equivalences":[
-            "ICE1003",
-            "ICE1513",
-            "ICM1022"
-        ]
+        "credits": 10,
+        "vacancy": {
+            "total": 140,
+            "available": 8
+        },
+        "schedule": [
+            {
+                "identifier": "CAT",
+                "location": {
+                    "campus": "San Joaquin",
+                    "place": "B11"
+                },
+                "modules": [
+                    {
+                        "day": "L",
+                        "hours": [
+                            3
+                        ]
+                    },
+                    {
+                        "day": "W",
+                        "hours": [
+                            3
+                        ]
+                    },
+                    {
+                        "day": "V",
+                        "hours": [
+                            3
+                        ]
+                    }
+                ]
+            },
+            {
+                "identifier": "AYUD",
+                "location": {
+                    "campus": "San Joaquin",
+                    "place": "CS-101"
+                },
+                "modules": [
+                    {
+                        "day": "J",
+                        "hours": [
+                            6
+                        ]
+                    }
+                ]
+            }
+        ],
+        "school": "Física",
+        "information": "El curso presenta los principios fundamentales para el estudio de la estática y dinámica de sistemas mecánicos y estructurales discretos rígidos y deformables. El curso se basa en la aplicación de los tres pilares fundamentales de la mecánica clásica: la cinemática, el equilibrio, y las leyes constitutivas. El curso comienza con el estudio detallado de la cinemática del movimiento de partículas, sistemas de partículas y cuerpos. Se plantean luego las leyes y ecuaciones constitutivas fundamentales que relacionan la cinemática con las fuerzas que actúan sobre los cuerpos, conjuntamente con los principios fundamentales de energía mecánica y trabajo. Utilizando, la cinemática y las leyes constitutivas, se estudian distintas herramientas para plantear el equilibrio de los sistemas mecánicos y estructurales, con énfasis en los principios de energía y trabajos virtuales. El curso enfatiza la construcción y análisis de modelos físicos y matemáticos de sistemas mecánicos y estructurales reales.",
+        "requisites": {
+            "requirements": [
+                {
+                    "prerequisites": [
+                        "FIS1503",
+                        "MAT1203"
+                    ],
+                    "corequisites": [
+                        "MAT1620"
+                    ]
+                },
+                {
+                    "prerequisites": [
+                        "MAT1610"
+                    ],
+                    "corequisites": [
+                        "MAT1203"
+                    ]
+                }
+            ],
+            "relation": null,
+            "restrictions": [],
+            "equivalences": [
+                "ICE1003",
+                "ICE1513",
+                "ICM1022"
+            ]
+        }
+    },
+    {
+        "year": 2015,
+        "period": 2,
+        "NRC": 16150,
+        "initials": "FIS1513",
+        "droppable": true,
+        "english": false,
+        "section": 4,
+        "specialApproval": false,
+        "name": "Estática y Dinámica",
+        "teachers": [
+            {
+                "name": "Jones Matias",
+                "photoURL": "http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Jones%20Matias&semestre=2015-2&sigla=FIS1513&seccion=4"
+            }
+        ],
+        "credits": 10,
+        "vacancy": {
+            "total": 140,
+            "available": 25
+        },
+        "schedule": [
+            {
+                "identifier": "CAT",
+                "location": {
+                    "campus": "San Joaquin",
+                    "place": "M1"
+                },
+                "modules": [
+                    {
+                        "day": "L",
+                        "hours": [
+                            3
+                        ]
+                    },
+                    {
+                        "day": "W",
+                        "hours": [
+                            3
+                        ]
+                    },
+                    {
+                        "day": "V",
+                        "hours": [
+                            3
+                        ]
+                    }
+                ]
+            },
+            {
+                "identifier": "AYUD",
+                "location": {
+                    "campus": "San Joaquin",
+                    "place": "M1"
+                },
+                "modules": [
+                    {
+                        "day": "L",
+                        "hours": [
+                            5
+                        ]
+                    }
+                ]
+            }
+        ],
+        "school": "Física",
+        "information": "El curso presenta los principios fundamentales para el estudio de la estática y dinámica de sistemas mecánicos y estructurales discretos rígidos y deformables. El curso se basa en la aplicación de los tres pilares fundamentales de la mecánica clásica: la cinemática, el equilibrio, y las leyes constitutivas. El curso comienza con el estudio detallado de la cinemática del movimiento de partículas, sistemas de partículas y cuerpos. Se plantean luego las leyes y ecuaciones constitutivas fundamentales que relacionan la cinemática con las fuerzas que actúan sobre los cuerpos, conjuntamente con los principios fundamentales de energía mecánica y trabajo. Utilizando, la cinemática y las leyes constitutivas, se estudian distintas herramientas para plantear el equilibrio de los sistemas mecánicos y estructurales, con énfasis en los principios de energía y trabajos virtuales. El curso enfatiza la construcción y análisis de modelos físicos y matemáticos de sistemas mecánicos y estructurales reales.",
+        "requisites": {
+            "requirements": [
+                {
+                    "prerequisites": [
+                        "FIS1503",
+                        "MAT1203"
+                    ],
+                    "corequisites": [
+                        "MAT1620"
+                    ]
+                },
+                {
+                    "prerequisites": [
+                        "MAT1610"
+                    ],
+                    "corequisites": [
+                        "MAT1203"
+                    ]
+                }
+            ],
+            "relation": null,
+            "restrictions": [],
+            "equivalences": [
+                "ICE1003",
+                "ICE1513",
+                "ICM1022"
+            ]
+        }
+    },
+    {
+        "year": 2015,
+        "period": 2,
+        "NRC": 16151,
+        "initials": "FIS1513",
+        "droppable": true,
+        "english": false,
+        "section": 5,
+        "specialApproval": false,
+        "name": "Estática y Dinámica",
+        "teachers": [
+            {
+                "name": "Garcia Griselda",
+                "photoURL": "http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Garcia%20Griselda&semestre=2015-2&sigla=FIS1513&seccion=5"
+            }
+        ],
+        "credits": 10,
+        "vacancy": {
+            "total": 153,
+            "available": 101
+        },
+        "schedule": [
+            {
+                "identifier": "CAT",
+                "location": {
+                    "campus": "San Joaquin",
+                    "place": "M2"
+                },
+                "modules": [
+                    {
+                        "day": "L",
+                        "hours": [
+                            4
+                        ]
+                    },
+                    {
+                        "day": "W",
+                        "hours": [
+                            4
+                        ]
+                    },
+                    {
+                        "day": "V",
+                        "hours": [
+                            4
+                        ]
+                    }
+                ]
+            },
+            {
+                "identifier": "AYUD",
+                "location": {
+                    "campus": "San Joaquin",
+                    "place": "M1"
+                },
+                "modules": [
+                    {
+                        "day": "J",
+                        "hours": [
+                            6
+                        ]
+                    }
+                ]
+            }
+        ],
+        "school": "Física",
+        "information": "El curso presenta los principios fundamentales para el estudio de la estática y dinámica de sistemas mecánicos y estructurales discretos rígidos y deformables. El curso se basa en la aplicación de los tres pilares fundamentales de la mecánica clásica: la cinemática, el equilibrio, y las leyes constitutivas. El curso comienza con el estudio detallado de la cinemática del movimiento de partículas, sistemas de partículas y cuerpos. Se plantean luego las leyes y ecuaciones constitutivas fundamentales que relacionan la cinemática con las fuerzas que actúan sobre los cuerpos, conjuntamente con los principios fundamentales de energía mecánica y trabajo. Utilizando, la cinemática y las leyes constitutivas, se estudian distintas herramientas para plantear el equilibrio de los sistemas mecánicos y estructurales, con énfasis en los principios de energía y trabajos virtuales. El curso enfatiza la construcción y análisis de modelos físicos y matemáticos de sistemas mecánicos y estructurales reales.",
+        "requisites": {
+            "requirements": [
+                {
+                    "prerequisites": [
+                        "FIS1503",
+                        "MAT1203"
+                    ],
+                    "corequisites": [
+                        "MAT1620"
+                    ]
+                },
+                {
+                    "prerequisites": [
+                        "MAT1610"
+                    ],
+                    "corequisites": [
+                        "MAT1203"
+                    ]
+                }
+            ],
+            "relation": null,
+            "restrictions": [],
+            "equivalences": [
+                "ICE1003",
+                "ICE1513",
+                "ICM1022"
+            ]
+        }
+    },
+    {
+        "year": 2015,
+        "period": 2,
+        "NRC": 16154,
+        "initials": "FIS1513",
+        "droppable": true,
+        "english": false,
+        "section": 6,
+        "specialApproval": false,
+        "name": "Estática y Dinámica",
+        "teachers": [
+            {
+                "name": "Hevia Samuel",
+                "photoURL": "http://buscacursos.uc.cl/getFotoProfe.db.php?nombre=Hevia%20Samuel&semestre=2015-2&sigla=FIS1513&seccion=6"
+            }
+        ],
+        "credits": 10,
+        "vacancy": {
+            "total": 154,
+            "available": 25
+        },
+        "schedule": [
+            {
+                "identifier": "CAT",
+                "location": {
+                    "campus": "San Joaquin",
+                    "place": "A1"
+                },
+                "modules": [
+                    {
+                        "day": "L",
+                        "hours": [
+                            4
+                        ]
+                    },
+                    {
+                        "day": "W",
+                        "hours": [
+                            4
+                        ]
+                    },
+                    {
+                        "day": "V",
+                        "hours": [
+                            4
+                        ]
+                    }
+                ]
+            },
+            {
+                "identifier": "AYUD",
+                "location": {
+                    "campus": "San Joaquin",
+                    "place": "CS-102"
+                },
+                "modules": [
+                    {
+                        "day": "L",
+                        "hours": [
+                            5
+                        ]
+                    }
+                ]
+            }
+        ],
+        "school": "Física",
+        "information": "El curso presenta los principios fundamentales para el estudio de la estática y dinámica de sistemas mecánicos y estructurales discretos rígidos y deformables. El curso se basa en la aplicación de los tres pilares fundamentales de la mecánica clásica: la cinemática, el equilibrio, y las leyes constitutivas. El curso comienza con el estudio detallado de la cinemática del movimiento de partículas, sistemas de partículas y cuerpos. Se plantean luego las leyes y ecuaciones constitutivas fundamentales que relacionan la cinemática con las fuerzas que actúan sobre los cuerpos, conjuntamente con los principios fundamentales de energía mecánica y trabajo. Utilizando, la cinemática y las leyes constitutivas, se estudian distintas herramientas para plantear el equilibrio de los sistemas mecánicos y estructurales, con énfasis en los principios de energía y trabajos virtuales. El curso enfatiza la construcción y análisis de modelos físicos y matemáticos de sistemas mecánicos y estructurales reales.",
+        "requisites": {
+            "requirements": [
+                {
+                    "prerequisites": [
+                        "FIS1503",
+                        "MAT1203"
+                    ],
+                    "corequisites": [
+                        "MAT1620"
+                    ]
+                },
+                {
+                    "prerequisites": [
+                        "MAT1610"
+                    ],
+                    "corequisites": [
+                        "MAT1203"
+                    ]
+                }
+            ],
+            "relation": null,
+            "restrictions": [],
+            "equivalences": [
+                "ICE1003",
+                "ICE1513",
+                "ICM1022"
+            ]
+        }
     }
-}
+]

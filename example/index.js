@@ -1,8 +1,8 @@
 const buscacursos = require('..');
 
 const query = {
-  'cxml_semestre': '2016-1',
-  'cxml_sigla': 'FIS0151',
+  'cxml_semestre': '2015-2',
+  'cxml_sigla': 'FIS1513',
 };
 
 function toJSON(course) {
@@ -15,7 +15,7 @@ buscacursos.fetch(query).then(courses => {
     const initials = course.initials;
     const vacancy = course.vacancy;
     const credits = course.credits;
-    console.log(toJSON(course));
     // ...
   });
+  console.log(toJSON(courses));
 });
