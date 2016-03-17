@@ -150,7 +150,7 @@ describe('buscacursos', function() {
     }).catch(done);
   });
 
-  it('should parse results divided by multiple headers', done => {
+  it.skip('should parse results divided by multiple headers', done => {
     const query = {
       'cxml_semestre': '2016-1',
       'cxml_sigla': 'AR', // returns resutls from 'Arquitectura' and 'Arte'
