@@ -1,35 +1,40 @@
 {
   "name": "buscacursos-uc",
-  "version": "3.1.0",
-  "description": "Buscacursos UC client",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "Library Description",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "mocha test"
+    "build": "babel src --out-dir lib",
+    "build:umd": "webpack src/index.js dist/buscacursos-uc.js",
+    "build:umd:min": "cross-env NODE_ENV=production webpack src/index.js dist/buscacursos-uc.min.js",
+    "clean": "rimraf lib dist coverage",
+    "lint": "eslint src test examples",
+    "test": "mocha --compilers js:babel-register --recursive",
+    "test:watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrpatiwi/uc-courses.git"
+    "url": "https://github.com/mrpatiwi/buscacursos-uc.git"
   },
-  "keywords": [
-    "uc",
-    "puc",
-    "chile",
-    "courses",
-    "buscacursos"
-  ],
-  "author": "Patricio López <patricio@lopezjuri.com> (https://lopezjuri.com)",
+  "keywords": [],
+  "author": "Patricio López Juri",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mrpatiwi/uc-courses/issues"
+    "url": "https://github.com/mrpatiwi/buscacursos-uc/issues"
   },
-  "homepage": "https://github.com/mrpatiwi/uc-courses#readme",
-  "dependencies": {
-    "bluebird": "^3.1.1",
-    "cheerio": "^0.19.0",
-    "request-promise": "^2.0.0"
-  },
+  "homepage": "https://github.com/mrpatiwi/buscacursos-uc",
+  "dependencies": {},
   "devDependencies": {
-    "chai": "^3.4.1",
-    "mocha": "^2.3.4"
+    "babel-cli": "^6.6.5",
+    "babel-core": "^6.7.4",
+    "babel-eslint": "^6.0.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.6.0",
+    "chai": "^3.5.0",
+    "cross-env": "^1.0.7",
+    "eslint": "^2.5.3",
+    "mocha": "^2.4.5",
+    "rimraf": "^2.5.2",
+    "webpack": "^1.12.14"
   }
 }

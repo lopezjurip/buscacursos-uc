@@ -1,4 +1,6 @@
-example
+.DS_Store
+*.log
+src
 test
-.codeclimate.yml
-.travis.yml
+examples
+coverage
