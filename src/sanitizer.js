@@ -19,6 +19,6 @@ export default class Sanitizer {
 
   boolean(node) {
     const value = this.text(node);
-    return value && value.toUpperCase() === 'SI'
+    return value && value.toUpperCase() === 'SI';
   }
 }

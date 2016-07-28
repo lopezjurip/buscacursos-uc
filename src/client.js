@@ -1,4 +1,3 @@
-import Promise from 'bluebird';
 import { stringify } from 'qs';
 import merge from 'lodash/merge';
 import transform from 'lodash/transform';
@@ -57,6 +56,7 @@ export default class BuscaCursosClient {
   }
 
   getCourses(query, { fetching, parsing, ...options }) {
+    // eslint-disable-next-line
     const [year, period] = split(query['cxml_semestre'], '-').map(Number);
     const params = { year, period };
 
@@ -112,7 +112,7 @@ export default class BuscaCursosClient {
   }
 
   processRow($row, params = {}, options = {}) {
-    const { sanitizer, $ } = this;
+    const { sanitizer } = this;
 
     const $columns = $row.children('td');
 
@@ -174,8 +174,8 @@ export default class BuscaCursosClient {
 
       // See: https://lodash.com/docs#transform
       const updater = transform(days, (daysAccumulator, day) => {
-        daysAccumulator[day] = transform(hours, (hoursAccumulator, hour) => {
-          hoursAccumulator[hour] = { type, classroom: where, campus: campus };
+        daysAccumulator[day] = transform(hours, (hoursAccumulator, hour) => { // eslint-disable-line
+          hoursAccumulator[hour] = { type, classroom: where, campus: campus }; // eslint-disable-line
         }, {});
       }, {});
 
@@ -212,8 +212,6 @@ export default class BuscaCursosClient {
   }
 
   processInformation($document, options = {}) {
-    const { sanitizer, $ } = this;
-
     const $info = $document.find('div > div:nth-child(1) > div:nth-child(1)');
     return this.sanitizer.text($info);
   }
@@ -245,7 +243,7 @@ export default class BuscaCursosClient {
       // relations: relations(pre[1]),
       // restrictions: restrictions(pre[2]),
       // equivalences: equivalences(eq[0]),
-    }
+    };
   }
 }
 
@@ -295,17 +293,15 @@ function equivalences(string) {
 
 function relations(string) {
   if (!string) return null;
-  string = string.toLowerCase();
-  if (string === 'o') {
-    return 'or';
-  } else if (string === 'y') {
-    return 'and';
+  switch (string.toLowerCase()) {
+    case 'o': return 'or';
+    case 'y': return 'and';
+    default: return null;
   }
-  return null;
 }
 
 function optionSplit(string, options) {
-  for (var separator = 0; separator < options.length - 1; separator++) {
+  for (let separator = 0; separator < options.length - 1; separator++) {
     const result = string.split(options[separator]);
     if (result.length > 1) {
       return result;
