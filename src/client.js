@@ -60,14 +60,16 @@ export default class BuscaCursosClient {
     return this.request(url, query, options);
   }
 
-  getCourses(query, { fetching, parsing, ...options }) {
+  getCourses(query, options = {}) {
     // eslint-disable-next-line
     const [year, period] = split(query['cxml_semestre'], '-').map(Number);
     const params = { year, period };
 
+    const { fetching, parsing } = options;
+
     return this.requestCourses(query, fetching)
       .then(html => this.parse(html, parsing))
-      .then($document => this.process($document, params));
+      .then($document => this.processCourses($document, params));
   }
 
   getInformation({ year, period, initials, section }, options = {}) {

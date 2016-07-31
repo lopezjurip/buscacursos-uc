@@ -51,6 +51,15 @@ describe('loading content', function () {
     });
   });
 
+  it('should get courses by query', function () {
+    const client = createInstance();
+    const query = {
+      'cxml_semestre': '2016-2',
+      'cxml_sigla': 'FIS0151',
+    };
+    return client.getCourses(query);
+  });
+
   it('should get information as string', function () {
     const client = createInstance();
     return client.requestInformation({ year: 2016, period: 2, initials: 'MAT1610', section: '1' });
