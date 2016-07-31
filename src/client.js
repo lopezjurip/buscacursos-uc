@@ -27,7 +27,8 @@ export default class BuscaCursosClient {
 
   request(url, query, options) {
     const querystring = stringify(query);
-    return this.fetch(`${url}?${querystring}`, options).then(response => response.text());
+    const fetch = this.fetch;
+    return fetch(`${url}?${querystring}`, options).then(response => response.text());
   }
 
   requestCourses(query = {}, options = {}) {

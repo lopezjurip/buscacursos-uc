@@ -3,13 +3,18 @@
 <head>
   <meta charset="utf-8">
   <title></title>
+  <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
 </head>
 <body>
 2 + 2 = <span id="result"></span>
 </body>
 <script src="../dist/buscacursos-uc.min.js"></script>
 <script>
-  var result = document.getElementById('result');
-  result.innerHTML = MyLibrary.add(2, 2);
+  console.log(BuscacursosUC);
+  var client = BuscacursosUC.default({ fetch: fetch, $: $ });
+  client.getRequisites({ initials: 'ENF2318' }).then(requisites => {
+    console.log(JSON.stringify(requisites, null, 4));
+    return requisites;
+  });
 </script>
 </html>
