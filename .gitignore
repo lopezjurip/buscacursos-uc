@@ -1,5 +1,9 @@
 #### joe made this: http://goel.io/joe
 
+# Compiled
+dist
+lib
+
 #####=== Node ===#####
 
 # Logs
@@ -85,4 +89,3 @@ Temporary Items
 
 # Linux trash folder which might appear on any partition or disk
 .Trash-*
-

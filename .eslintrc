@@ -1,7 +1,9 @@
 {
   "parser": "babel-eslint",
+  "extends": "airbnb-base",
   "rules": {
     "strict": 0,
+    "func-names": 0,
     "quotes": [2, "single"]
   },
   "env": {

@@ -1,0 +1,1448 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>Buscador de Cursos UC - Organiza tu Horario</title>
+
+	<link rel="stylesheet" href="css/estilo.css" type="text/css" />
+	<link rel="stylesheet" href="css/jquery.cluetip.css" type="text/css" />
+	<link rel="stylesheet" href="js/colorbox/colorbox.css" type="text/css" />
+	<!--LPC 02/10/2015 Javascript para el manejo de popup de vacantes de reservas-->
+	<link rel="stylesheet" href="css/popup.css" type="text/css" />
+
+	<link rel="icon" type="image/png" href="fotos/favicon.png" />
+
+	<meta name="author" content="Felipe Brahm - http://www.felipebrahm.com - http://www.soufrag.cl" />
+	<meta name="copyright" content="(C)2008-2010 Felipe Brahm" />
+	<meta name="robots" content="follow,index" />
+
+	<meta name="description" content="Sistema de Búsqueda de Cursos y Organizador de Horario UC: Encuentra los datos de los cursos y ramos de la Pontificia Universidad Católica de Chile. Organiza y planifica tu horario." />
+	<meta name="keywords" content="buscador, uc, puc, buscador de cursos, horario, organiza tu horario, organizador horario, buscador de ramos, pontificia universidad católica de chile, cursos, ramos, planificador, planifica, planificador uc" />
+
+
+	<!-- script type="text/javascript" src="js/jquery-1.4.2.min.js"></script -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+	<script type="text/javascript" src="js/common.js"></script>
+
+	<script type="text/javascript" src="js/colorbox/jquery.colorbox-min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.form.js"></script>
+
+	<script type="text/javascript" src="quicksearch/quicksearch.js"></script>
+
+	<script type="text/javascript" src="js/jquery.hoverIntent.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cluetip.min.js"></script>
+
+	<!--LPC 02/10/2015 Javascript para el manejo de popup de vacantes de reservas-->
+	<script type="text/javascript" src="js/popup.js"></script>
+
+	<script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+
+	<!-- inicio Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18838542-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- fin Google Analytics -->
+</head>
+
+<body>
+
+	<a name="top"></a>
+
+	<table width="100%" cellpadding="0" cellspacing="0" style="height:100%">
+
+		<tr>
+
+			<td valign="top">
+
+				<div id="wrapper">
+
+					<!-- inicio IMAGEN SUPERIOR
+					<div id="arriba">
+
+						<div id="arriba_imagen">
+
+						</div>
+
+					</div>
+					fin IMAGEN SUPERIOR -->
+
+					<!--
+					<div id="tituloPrincipal">
+						Sistema de B&uacute;squeda de Cursos UC
+					</div>
+					-->
+
+					<!-- inicio FORMULARIO DE BÚSQUEDA E INICIO DE SESIÓN -->
+
+						<div align="center">
+
+							<div class="centro">
+<div style="max-width: 1080px;margin: 0 auto; float: none;">
+	<div id="overlay" class="web_dialog_overlay"></div>
+	<div id="dialog" class="web_dialog">
+		<a class="modalCloseImg simplemodal-close" title="Close" id="btnClose"></a>
+		<div id="div1" style="max-width: 1080px;"></div>
+	</div>
+</div>
+<div style="border:1px solid #BAC0E4; border-bottom:0px; background:#F1F8FD; padding-bottom:15px;">
+
+	<div style="padding-left:20px;padding-top:20px;margin-bottom:24px;">
+
+		<div style="float:left;margin-left:5px">
+			<img src="fotos/UCcolor.png" width="172" height="100" longdesc="UC" alt="UC" />
+		</div>
+
+		<div id="TituloSistemaDeBusqueda" style="float:right;margin-right:22px;margin-top:22px">
+			<img src="fotos/TituloSistemaDeBusqueda.png" width="350" height="67" longdesc="Sistema de Búsqueda de Cursos UC" alt="Sistema de Búsqueda de Cursos UC" />
+		</div>
+
+		<!-- div style="float:right; width:315px">
+			<iframe src="http://www.facebook.com/plugins/likebox.php?id=138440862841228&amp;width=310&amp;connections=0&amp;stream=false&amp;header=false&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:310px; height:62px;" allowTransparency="true"></iframe>
+		</div -->
+
+		<div style="clear:both"></div>
+
+		<!-- div style="font-size:14px; font-weight:bold; margin-top:20px; margin-bottom:20px; text-align:justify;">
+			La búsqueda se realiza utilizando toda la información disponible públicamente en el <a href="http://dsrd.uc.cl/alumnos-uc/cursos" target="_blank">libro de cursos de la Universidad</a>.
+		</div -->
+
+		</br>
+
+<!---	</div>
+
+	<center>
+		<font color="#FF0000">
+			<strong>
+				* IMPORTANTE: La información asociada a las vacantes de cursos, será actualizada después del término de cada grupo de inscripción.
+			</strong>
+		</font>
+	</center>
+	</br>
+	<div>
+-->
+
+		<!-- inicio DIV IZQUIERDA -->
+		<div style="float:left;padding-left:20px;">
+
+			<div style="border:1px solid #BAC0E4; background:#E7EAF6; width:500px; height:559px; margin-bottom: 20px;">
+
+				<div style="background:#CCD1E5; text-align:left; margin: 2px">
+
+					<div style="font-weight:bold;font-size:12px; padding: 1px; margin-right:3px; padding-top:2px;padding-left:5px">
+
+						<img src="fotos/flechaIzquierda.jpg" alt="Búsqueda de Cursos" width="10" height="10" longdesc="Búsqueda de Cursos" style="margin-right:2px" />
+
+						Búsqueda de Cursos
+
+					</div>
+
+				</div>
+
+					<div id="divFormularioBusqueda">
+						﻿
+<!-- inicio FORMULARIO DE BÚSQUEDA -->
+
+<div style="text-align:center; margin-top:0px; margin-bottom:15px;">
+
+	<form name="cxml_buscador_form" action="#resultados" method="get">
+
+
+		<table cellpadding="2" cellspacing="2" border="0" align="center" style="text-align:left;">
+
+			<tr>
+
+				<td style="font-weight:bold; width:115px">
+					Semestre:
+				</td>
+
+				<td>
+
+				<select name="cxml_semestre" onchange="javascript:location.href='?cxml_semestre='+this.options[this.selectedIndex].value">
+<option value="2016-2"  selected="selected">2016 Segundo Semestre</option>
+<option value="2016-1" >2016 Primer Semestre</option>
+<option value="2015-3" >2015 TAV</option>
+<option value="2015-2" >2015 Segundo Semestre</option>
+<option value="2015-1" >2015 Primer Semestre</option>
+</select>
+
+				</td>
+
+			</tr>
+
+			<tr>
+
+				<td style="font-weight:bold; width:115px">
+					Sigla:
+				</td>
+
+				<td>
+					<input type="text" name="cxml_sigla" class="buscadorSimpleInput" value="MAT1610" />
+				</td>
+
+			</tr>
+			<tr>
+
+				<td style="font-weight:bold; width:115px">
+					NRC:
+				</td>
+
+				<td>
+					<input type="text" name="cxml_nrc" class="buscadorSimpleInput" value="" />
+				</td>
+
+			</tr>
+			<tr>
+
+				<td style="font-weight:bold; width:115px">
+					Nombre Curso:
+				</td>
+
+				<td>
+					<input type="text" name="cxml_nombre" class="buscadorSimpleInput" value="" />
+				</td>
+
+			</tr>
+			<tr>
+
+				<td style="font-weight:bold; width:115px">
+					Categoría:
+				</td>
+
+				<td>
+
+				<select name="cxml_categoria">
+<option value="TODOS" >-- Todos --</option>
+<option value="AE" >Formación Antropológica Ética</option>
+<option value="AS" >Aprendizaje Servicio</option>
+<option value="FT" >Formación Teológica</option>
+<option value="IN" >Cursos orientados a la Investi</option>
+</select>
+
+				</td>
+
+			</tr>
+			<tr>
+
+				<td style="font-weight:bold; width:115px">
+					Profesor:
+				</td>
+
+				<td>
+					<input type="text" name="cxml_profesor" class="buscadorSimpleInput" value="" />
+				</td>
+
+			</tr>
+
+			<tr>
+
+				<td style="font-weight:bold; width:115px">
+					Campus:
+				</td>
+
+				<td>
+
+				<select name="cxml_campus">
+<option value="TODOS" >-- Todos --</option>
+<option value="Campus Externo" >Campus Externo</option>
+<option value="Casa Central" >Casa Central</option>
+<option value="Lo Contador" >Lo Contador</option>
+<option value="Oriente" >Oriente</option>
+<option value="San Joaqu&iacute;n" >San Joaqu&iacute;n</option>
+<option value="Villarrica" >Villarrica</option>
+</select>
+
+				</td>
+
+			</tr>
+
+			<tr>
+
+				<td style="font-weight:bold; width:115px">
+					Escuela:
+				</td>
+
+				<td>
+
+				<select name="cxml_unidad_academica">
+<option value="TODOS" >-- Todas --</option>
+<option value="68" >Acad Inter de Filosofía</option>
+<option value="0" >Actividades Universitarias</option>
+<option value="34" >Actuación</option>
+<option value="11" >Agronomía e Ing. Forestal</option>
+<option value="94" >Arquitectura</option>
+<option value="33" >Arte</option>
+<option value="2" >Astrofisica</option>
+<option value="7" >Bachillerato</option>
+<option value="52" >CARA</option>
+<option value="45" >Ciencia Política</option>
+<option value="12" >Ciencias Biológicas</option>
+<option value="16" >Ciencias de la Salud</option>
+<option value="40" >Colegio Programas Doctorales</option>
+<option value="28" >Comunicaciones</option>
+<option value="1" >Construccion Civil</option>
+<option value="53" >Deportes</option>
+<option value="17" >Derecho</option>
+<option value="59" >Diseño</option>
+<option value="20" >Educación</option>
+<option value="13" >Enfermería</option>
+<option value="95" >Estudios Urbanos</option>
+<option value="51" >Estética</option>
+<option value="67" >Filosofía</option>
+<option value="3" >Física</option>
+<option value="57" >Geografía</option>
+<option value="56" >Historia</option>
+<option value="4" >Ingeniería</option>
+<option value="18" >Ingeniería Biológica y Médica</option>
+<option value="5" >Ingeniería Comercial</option>
+<option value="64" >Letras</option>
+<option value="9" >Lic. Generales (College)</option>
+<option value="6" >Matemática</option>
+<option value="14" >Medicina</option>
+<option value="70" >Música</option>
+<option value="15" >Odontología</option>
+<option value="29" >Psicología</option>
+<option value="10" >Química</option>
+<option value="54" >Requisito Idioma</option>
+<option value="91" >Sociología</option>
+<option value="38" >Teología</option>
+<option value="30" >Trabajo Social</option>
+<option value="21" >Villarica</option>
+</select>
+
+				</td>
+
+			</tr>
+
+			<tr>
+<!--
+
+***** DVC: 13/05/2014 , Se comenta texto y fila "OFGs para"
+
+				<td style="font-weight:bold; width:115px">
+					<span title="Mostrar sólo los Optativos de Formación General válidos para la carrera seleccionada." style="cursor:help;border-bottom:1px dashed #000">OFGs para</span>:
+				</td>
+
+
+				<td>
+-->
+
+				</td>
+
+			</tr>
+
+			<tr>
+
+				<td style="font-weight:bold; width:90px" valign="top">
+					Horario:
+				</td>
+
+				<td>
+
+					<!-- select name="cxml_horario_tipo_busqueda">
+						<option value="si_tenga" >Al menos este horario de...</option>
+					</select -->
+
+					<input type="hidden" name="cxml_horario_tipo_busqueda" value="si_tenga" />
+					Al menos este horario de...
+
+					<select name="cxml_horario_tipo_busqueda_actividad">
+<option value="TODOS" >Todos</option>
+<option value="CLAS" >CLAS</option>
+<option value="AYU" >AYU</option>
+<option value="LAB" >LAB</option>
+<option value="LIB" >LIB</option>
+<option value="PRA" >PRA</option>
+<option value="SUP" >SUP</option>
+<option value="TAL" >TAL</option>
+<option value="TER" >TER</option>
+<option value="TES" >TES</option>
+</select>
+
+					<br /><br />
+
+					<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #CCD1E5; background:#FFF">
+<tr>
+<td style="text-align:center; border:1px solid #CCD1E5">&nbsp;</td>
+<td style="text-align:center; border:1px solid #CCD1E5">L</td>
+<td style="text-align:center; border:1px solid #CCD1E5">M</td>
+<td style="text-align:center; border:1px solid #CCD1E5">W</td>
+<td style="text-align:center; border:1px solid #CCD1E5">J</td>
+<td style="text-align:center; border:1px solid #CCD1E5">V</td>
+<td style="text-align:center; border:1px solid #CCD1E5">S</td>
+</tr>
+<tr>
+<td style="text-align:center; border:1px solid #CCD1E5">08:30</td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_L1" value="L1"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_M1" value="M1"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_W1" value="W1"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_J1" value="J1"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_V1" value="V1"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_S1" value="S1"  style="width:20px" /></td>
+</tr>
+<tr>
+<td style="text-align:center; border:1px solid #CCD1E5">10:00</td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_L2" value="L2"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_M2" value="M2"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_W2" value="W2"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_J2" value="J2"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_V2" value="V2"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_S2" value="S2"  style="width:20px" /></td>
+</tr>
+<tr>
+<td style="text-align:center; border:1px solid #CCD1E5">11:30</td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_L3" value="L3"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_M3" value="M3"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_W3" value="W3"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_J3" value="J3"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_V3" value="V3"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_S3" value="S3"  style="width:20px" /></td>
+</tr>
+<tr>
+<td style="text-align:center; border:1px solid #CCD1E5;">13:00</td><td colspan="8" style="background:#E7EAF6;text-align:center;border:1px solid #CCD1E5;letter-spacing:18px">&nbsp;ALMUERZO</td>
+</tr>
+<tr>
+<td style="text-align:center; border:1px solid #CCD1E5">14:00</td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_L4" value="L4"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_M4" value="M4"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_W4" value="W4"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_J4" value="J4"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_V4" value="V4"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_S4" value="S4"  style="width:20px" /></td>
+</tr>
+<tr>
+<td style="text-align:center; border:1px solid #CCD1E5">15:30</td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_L5" value="L5"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_M5" value="M5"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_W5" value="W5"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_J5" value="J5"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_V5" value="V5"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_S5" value="S5"  style="width:20px" /></td>
+</tr>
+<tr>
+<td style="text-align:center; border:1px solid #CCD1E5">17:00</td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_L6" value="L6"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_M6" value="M6"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_W6" value="W6"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_J6" value="J6"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_V6" value="V6"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_S6" value="S6"  style="width:20px" /></td>
+</tr>
+<tr>
+<td style="text-align:center; border:1px solid #CCD1E5">18:30</td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_L7" value="L7"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_M7" value="M7"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_W7" value="W7"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_J7" value="J7"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_V7" value="V7"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_S7" value="S7"  style="width:20px" /></td>
+</tr>
+<tr>
+<td style="text-align:center; border:1px solid #CCD1E5">20:00</td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_L8" value="L8"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_M8" value="M8"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_W8" value="W8"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_J8" value="J8"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_V8" value="V8"  style="width:20px" /></td>
+<td style="text-align:center; border:1px solid #CCD1E5;"><input type="checkbox" name="cxml_modulo_S8" value="S8"  style="width:20px" /></td>
+</tr>
+</table>
+
+				</td>
+
+			</tr>
+
+		</table>
+
+		<div style="margin-top:22px"></div>
+
+		<input type="submit" value="Buscar &nbsp;Cursos" class="boton" />
+
+					&nbsp;&nbsp;
+			<input type="button" value="Limpiar &nbsp;Formulario" class="boton" onclick="javascript:ajaxpage('formularioBusqueda.inc.php', 'divFormularioBusqueda');" />
+
+
+	</form>
+
+</div>
+
+<!-- fin FORMULARIO DE BÚSQUEDA -->					</div>
+
+			</div>
+
+		</div> <!-- fin DIV IZQUIERDA -->
+
+		<!-- inicio DIV IZQUIERDA -->
+
+		<!-- DVC: Cambio posición de 20 a 30 px -->
+		<div style="float: right;padding-right:20px;">
+
+			<div style="border:1px solid #BAC0E4; background:#E7EAF6; width:580px; margin-bottom: 20px;">
+
+				<div style="background:#CCD1E5; text-align:left; margin: 2px">
+
+					<div style="font-weight:bold;font-size:12px; padding: 1px; margin-right:3px; padding-top:2px;padding-left:5px">
+
+						<img src="fotos/flechaIzquierda.jpg" alt="Horario" width="10" height="10" longdesc="Horario" style="margin-right:2px" />
+
+						Mi Horario
+
+					</div>
+
+				</div>
+
+				<div id="divMiHorario">
+
+
+<div style="padding:5px">
+
+	<script type="text/javascript">
+
+		//esto es para que se desaparezca el DIV del quicksearch al perder el foco
+
+		$(document).ready(function() {
+
+			var quicksearchMouseOver = false;
+
+			$('#quicksearch_input').blur(function() {
+				if(!quicksearchMouseOver)
+					document.getElementById("quicksearch").style.visibility="hidden";
+			});
+
+			$("#quicksearch").mouseenter(function(){
+				quicksearchMouseOver = true;
+			}).mouseleave(function(){
+				quicksearchMouseOver = false;
+			});
+
+		});
+
+	</script>
+
+	<form onsubmit="javascript:return false;">
+		<input type="text" id="quicksearch_input" size="30" onkeyup="showResult(this.value, event.keyCode||event.which)" autocomplete="off" value="Ingresa sigla o nombre para búsqueda rápida..." style="font-style:italic;color:#999;font-weight:normal" onclick="javascript:this.value='';this.style.color='#000';this.style.fontStyle='normal';this.style.fontWeight='bold';" />
+		<div id="quicksearch"></div>
+	</form>
+
+</div>
+
+<div style="padding:5px"><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #CCD1E5; background:#FFF">
+<tr>
+<td style="text-align:center; border:1px solid #CCD1E5">&nbsp;</td>
+<td style="text-align:center; border:1px solid #CCD1E5;">L</td>
+<td style="text-align:center; border:1px solid #CCD1E5;">M</td>
+<td style="text-align:center; border:1px solid #CCD1E5;">W</td>
+<td style="text-align:center; border:1px solid #CCD1E5;">J</td>
+<td style="text-align:center; border:1px solid #CCD1E5;">V</td>
+<td style="text-align:center; border:1px solid #CCD1E5;">S</td>
+</tr>
+<tr>
+<td style="text-align:center; width:20px; border:1px solid #CCD1E5;">08:30</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioCAT">12451-IIC2333</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioCAT">12641-IIC3113</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioCAT">12451-IIC2333</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioCAT">12641-IIC3113</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioAYUD">12451-IIC2333</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td style="text-align:center; width:20px; border:1px solid #CCD1E5;">10:00</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioCAT">12390-IIC2173</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioCAT">12390-IIC2173</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioAYUD">12390-IIC2173</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td style="text-align:center; width:20px; border:1px solid #CCD1E5;">11:30</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioCAT">14352-ICS2813</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioCAT">12336-IIC2113</span>
+<span class="horarioTABLA horarioCAT">12673-IIC3633</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioCAT">14352-ICS2813</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioCAT">12336-IIC2113</span>
+<span class="horarioTABLA horarioCAT">12673-IIC3633</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioCAT">14352-ICS2813</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td style="text-align:center; border:1px solid #CCD1E5;">13:00</td><td colspan="6" style="background:#E7EAF6;text-align:center;border:1px solid #CCD1E5;letter-spacing:30px">&nbsp;ALMUERZO</td>
+</tr>
+<tr>
+<td style="text-align:center; width:20px; border:1px solid #CCD1E5;">14:00</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioCAT">12669-IIC3585</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioCAT">13530-ICS2613</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioCAT">12669-IIC3585</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioCAT">13530-ICS2613</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td style="text-align:center; width:20px; border:1px solid #CCD1E5;">15:30</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioAYUD">13530-ICS2613</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td style="text-align:center; width:20px; border:1px solid #CCD1E5;">17:00</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+<span class="horarioTABLA horarioAYUD">12336-IIC2113</span>
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td style="text-align:center; width:20px; border:1px solid #CCD1E5;">18:30</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td style="text-align:center; width:20px; border:1px solid #CCD1E5;">20:00</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+<td style="text-align:center; width:60px; border:1px solid #CCD1E5; ">
+&nbsp;
+</td>
+</tr>
+</table></div>
+
+<div style="padding-left:5px; padding-right:5px">
+
+	<!-- div style="float:left; font-weight:bold; padding-right:2px;">
+		Simbología:
+	</div -->
+
+	<table width="100%">
+
+		<tr>
+
+
+			<td class="horarioSIMBOLOGIA">
+				<div style="width:12px;float:left;margin-right:5px" class="horarioCAT">&nbsp;</div>
+				Cátedra			</td>
+
+
+			<td class="horarioSIMBOLOGIA">
+				<div style="width:12px;float:left;margin-right:5px" class="horarioAYUD">&nbsp;</div>
+				Ayudantía			</td>
+
+
+			<td class="horarioSIMBOLOGIA">
+				<div style="width:12px;float:left;margin-right:5px" class="horarioLAB">&nbsp;</div>
+				Laboratorio			</td>
+
+
+			<td class="horarioSIMBOLOGIA">
+				<div style="width:12px;float:left;margin-right:5px" class="horarioTERR">&nbsp;</div>
+				Terreno			</td>
+
+			</tr><tr>
+
+			<td class="horarioSIMBOLOGIA">
+				<div style="width:12px;float:left;margin-right:5px" class="horarioTALL">&nbsp;</div>
+				Taller			</td>
+
+
+			<td class="horarioSIMBOLOGIA">
+				<div style="width:12px;float:left;margin-right:5px" class="horarioPRAC">&nbsp;</div>
+				Práctica			</td>
+
+
+			<td class="horarioSIMBOLOGIA">
+				<div style="width:12px;float:left;margin-right:5px" class="horarioTES">&nbsp;</div>
+				Tesis			</td>
+
+
+			<td class="horarioSIMBOLOGIA">
+				<div style="width:12px;float:left;margin-right:5px" class="horarioOTRO">&nbsp;</div>
+				Otro			</td>
+
+
+		</tr>
+
+	</table>
+
+</div>
+
+
+	<div style="text-align:center;margin-top:10px;margin-bottom:5px">
+		<input type="button" onclick="javascript:$.colorbox({href:'guardar-horario/ingresarEmail.ajax.php'});" value="Guardar y enviar por e-mail" class="botonChico" />
+		&nbsp;&nbsp;&nbsp;
+		<input type="button" onclick="javascript:location.href='MiHorario.xlsx.php';" value="Descargar mi horario en Excel" class="botonChico" />
+	</div>
+
+
+<div style="padding:10px;">
+
+
+		<div style="background:#CCD1E5; text-align:left; margin-bottom:5px">
+			<div style="font-weight:bold; font-size:16px; padding: 1px; margin-left:3px; padding-top:2px;">
+				Mis Cursos 2016-2			</div>
+		</div>
+
+		<table style="font-weight:bold">
+
+			<tr>
+<td valign="top"><a href="#" onclick="javascript:ajaxpage('miHorario.inc.php?accion=delete&sigla=ICS2613&seccion=1', 'divMiHorario');"><img src="fotos/delete.png" width="16" height="16" alt="Borrar" longdesc="Borrar" title="Borrar" /></a></td>
+<td valign="top"><a href="?cxml_semestre=2016-2&cxml_sigla=ICS2613#resultados"><img src="fotos/search.png" width="16" height="16" alt="Buscar" longdesc="Buscar" title="Buscar" /></a>&nbsp;</td>
+<td valign="top" width="110" class="tooltipProfesoresCurso" rel="informacionProfesoresCurso.ajax.php?semestre=2016-2&sigla=ICS2613&seccion=1" title="ICS2613 sección 1" style="cursor:help">13530-ICS2613-1</td>
+<td valign="top">Contabilidad y Control de Gestión</td>
+</tr>
+<tr>
+<td valign="top"><a href="#" onclick="javascript:ajaxpage('miHorario.inc.php?accion=delete&sigla=ICS2813&seccion=1', 'divMiHorario');"><img src="fotos/delete.png" width="16" height="16" alt="Borrar" longdesc="Borrar" title="Borrar" /></a></td>
+<td valign="top"><a href="?cxml_semestre=2016-2&cxml_sigla=ICS2813#resultados"><img src="fotos/search.png" width="16" height="16" alt="Buscar" longdesc="Buscar" title="Buscar" /></a>&nbsp;</td>
+<td valign="top" width="110" class="tooltipProfesoresCurso" rel="informacionProfesoresCurso.ajax.php?semestre=2016-2&sigla=ICS2813&seccion=1" title="ICS2813 sección 1" style="cursor:help">14352-ICS2813-1</td>
+<td valign="top">Organización y Comportamiento en la Empresa</td>
+</tr>
+<tr>
+<td valign="top"><a href="#" onclick="javascript:ajaxpage('miHorario.inc.php?accion=delete&sigla=IIC2113&seccion=1', 'divMiHorario');"><img src="fotos/delete.png" width="16" height="16" alt="Borrar" longdesc="Borrar" title="Borrar" /></a></td>
+<td valign="top"><a href="?cxml_semestre=2016-2&cxml_sigla=IIC2113#resultados"><img src="fotos/search.png" width="16" height="16" alt="Buscar" longdesc="Buscar" title="Buscar" /></a>&nbsp;</td>
+<td valign="top" width="110" class="tooltipProfesoresCurso" rel="informacionProfesoresCurso.ajax.php?semestre=2016-2&sigla=IIC2113&seccion=1" title="IIC2113 sección 1" style="cursor:help">12336-IIC2113-1</td>
+<td valign="top">Diseño Detallado de Software</td>
+</tr>
+<tr>
+<td valign="top"><a href="#" onclick="javascript:ajaxpage('miHorario.inc.php?accion=delete&sigla=IIC2173&seccion=1', 'divMiHorario');"><img src="fotos/delete.png" width="16" height="16" alt="Borrar" longdesc="Borrar" title="Borrar" /></a></td>
+<td valign="top"><a href="?cxml_semestre=2016-2&cxml_sigla=IIC2173#resultados"><img src="fotos/search.png" width="16" height="16" alt="Buscar" longdesc="Buscar" title="Buscar" /></a>&nbsp;</td>
+<td valign="top" width="110" class="tooltipProfesoresCurso" rel="informacionProfesoresCurso.ajax.php?semestre=2016-2&sigla=IIC2173&seccion=1" title="IIC2173 sección 1" style="cursor:help">12390-IIC2173-1</td>
+<td valign="top">Arquitectura de Sistemas de Software</td>
+</tr>
+<tr>
+<td valign="top"><a href="#" onclick="javascript:ajaxpage('miHorario.inc.php?accion=delete&sigla=IIC2333&seccion=1', 'divMiHorario');"><img src="fotos/delete.png" width="16" height="16" alt="Borrar" longdesc="Borrar" title="Borrar" /></a></td>
+<td valign="top"><a href="?cxml_semestre=2016-2&cxml_sigla=IIC2333#resultados"><img src="fotos/search.png" width="16" height="16" alt="Buscar" longdesc="Buscar" title="Buscar" /></a>&nbsp;</td>
+<td valign="top" width="110" class="tooltipProfesoresCurso" rel="informacionProfesoresCurso.ajax.php?semestre=2016-2&sigla=IIC2333&seccion=1" title="IIC2333 sección 1" style="cursor:help">12451-IIC2333-1</td>
+<td valign="top">Sistemas Operativos y Redes</td>
+</tr>
+<tr>
+<td valign="top"><a href="#" onclick="javascript:ajaxpage('miHorario.inc.php?accion=delete&sigla=IIC3113&seccion=1', 'divMiHorario');"><img src="fotos/delete.png" width="16" height="16" alt="Borrar" longdesc="Borrar" title="Borrar" /></a></td>
+<td valign="top"><a href="?cxml_semestre=2016-2&cxml_sigla=IIC3113#resultados"><img src="fotos/search.png" width="16" height="16" alt="Buscar" longdesc="Buscar" title="Buscar" /></a>&nbsp;</td>
+<td valign="top" width="110" class="tooltipProfesoresCurso" rel="informacionProfesoresCurso.ajax.php?semestre=2016-2&sigla=IIC3113&seccion=1" title="IIC3113 sección 1" style="cursor:help">12641-IIC3113-1</td>
+<td valign="top">Gestión de Proyectos de Tecnologías de Información</td>
+</tr>
+<tr>
+<td valign="top"><a href="#" onclick="javascript:ajaxpage('miHorario.inc.php?accion=delete&sigla=IIC3585&seccion=1', 'divMiHorario');"><img src="fotos/delete.png" width="16" height="16" alt="Borrar" longdesc="Borrar" title="Borrar" /></a></td>
+<td valign="top"><a href="?cxml_semestre=2016-2&cxml_sigla=IIC3585#resultados"><img src="fotos/search.png" width="16" height="16" alt="Buscar" longdesc="Buscar" title="Buscar" /></a>&nbsp;</td>
+<td valign="top" width="110" class="tooltipProfesoresCurso" rel="informacionProfesoresCurso.ajax.php?semestre=2016-2&sigla=IIC3585&seccion=1" title="IIC3585 sección 1" style="cursor:help">12669-IIC3585-1</td>
+<td valign="top">Diseño Avanzado de Aplicaciones Web</td>
+</tr>
+<tr>
+<td valign="top"><a href="#" onclick="javascript:ajaxpage('miHorario.inc.php?accion=delete&sigla=IIC3633&seccion=1', 'divMiHorario');"><img src="fotos/delete.png" width="16" height="16" alt="Borrar" longdesc="Borrar" title="Borrar" /></a></td>
+<td valign="top"><a href="?cxml_semestre=2016-2&cxml_sigla=IIC3633#resultados"><img src="fotos/search.png" width="16" height="16" alt="Buscar" longdesc="Buscar" title="Buscar" /></a>&nbsp;</td>
+<td valign="top" width="110" class="tooltipProfesoresCurso" rel="informacionProfesoresCurso.ajax.php?semestre=2016-2&sigla=IIC3633&seccion=1" title="IIC3633 sección 1" style="cursor:help">12673-IIC3633-1</td>
+<td valign="top">Sistemas Recomendadores</td>
+</tr>
+
+		</table>
+
+		<script type="text/javascript">
+
+			//información profesores en Mi Horario
+			$('td.tooltipProfesoresCurso').cluetip({
+				cluetipClass: 'jtip',
+				arrows: true,
+				dropShadow: false,
+				hoverIntent: true,
+				sticky: true,
+				mouseOutClose: true,
+				closePosition: 'title',
+				closeText: '<img src="fotos/cluetip/cross.png" alt="close" />',
+				positionBy: 'fixed',
+				leftOffset: 2,
+				//topOffset: 8,
+				topOffset: -5,
+				width: 180
+			});
+
+		</script>
+
+		<br />
+
+
+		<div style="background:#CCD1E5; text-align:left; margin-bottom:5px">
+			<div style="font-weight:bold; font-size:16px; padding: 1px; margin-left:3px; padding-top:2px;">
+				Mis Evaluaciones 2016-2			</div>
+		</div>
+
+
+				<div id="miCalendario">
+					<div style="text-align:center;margin:20px">
+						<input type="button" onclick="javascript:ajaxpage('calendarioPruebas.ajax.php', 'miCalendario');" value="Mostrar mi Calendario de Pruebas" class="boton" />
+					</div>
+				</div>
+
+
+
+</div>
+				</div>
+
+			</div>
+
+		</div> <!-- fin DIV IZQUIERDA -->
+
+	</div>
+
+	<div style="clear:both"></div>
+
+</div>
+
+
+	<a name="resultados"></a>
+	<div style="border:1px solid #BAC0E4; border-bottom:0px; background:#F1F8FD; padding:20px;">
+
+		<div style="font-size:16px; font-weight:bold; margin-bottom:10px;">
+			Resultados de la Búsqueda
+		</div>
+
+		<div style="font-size:12px; font-weight:bold; margin-top:20px; margin-bottom:20px">
+			<div style="margin-bottom:5px">
+				Ayuda:
+			</div>
+			<img src="fotos/add.png" width="18" height="15" alt="Agregar a mi horario" longdesc="Agregar a mi horario" style="vertical-align:text-bottom" /> Para agregar un curso a tu horario haz click en este ícono.
+			<br />
+			<img src="fotos/info.png" height="18" width="18" alt="Info" style="vertical-align:text-bottom" /> Puedes poner el puntero del mouse sobre este ícono para leer la información detallada de cada curso.
+		</div>
+
+		<table width="100%" cellpadding="3" cellspacing="1" border="0">
+<tr><td style="text-align:center; font-weight:bold; font-size:16px; color:#FFFFFF; background:#1730A6; padding:2px; margin:2px" colspan="16">Matemática</td></tr>
+<tr style="background:#CCD1E5;">
+<td style="font-weight:bold;font-size:11px;text-align:center;" rowspan="2">NRC</td>
+<td style="font-weight:bold;font-size:11px;text-align:center;" rowspan="2">Sigla</td>
+<td style="font-weight:bold;font-size:11px;text-align:center;" rowspan="2">Permite Retiro</td>
+<td style="font-weight:bold;font-size:11px;text-align:center;" rowspan="2">¿Se dicta en inglés?</td>
+<td style="font-weight:bold;font-size:11px;text-align:center;" rowspan="2">Sec.</td>
+<td style="font-weight:bold;font-size:11px;text-align:center;" rowspan="2">¿Requiere Aprob. Especial?</td>
+<td style="font-weight:bold;font-size:11px;text-align:center;" rowspan="2">Categoría</td>
+<td style="font-weight:bold;font-size:11px;text-align:center;" rowspan="2">Nombre</td>
+<td style="font-weight:bold;font-size:11px;text-align:center;" rowspan="2">Profesor</td>
+<td style="font-weight:bold;font-size:11px;text-align:center;" rowspan="2">Campus</td>
+<td style="font-weight:bold;font-size:11px;text-align:center;" rowspan="2">Créd.</td>
+<td style="font-weight:bold;font-size:11px;text-align:center;" colspan="3">Vacantes</td>
+<td style="font-weight:bold;font-size:11px;text-align:center;" rowspan="2">Horario</td>
+<td style="font-weight:bold;font-size:11px;text-align:center;" rowspan="2">Agregar al horario</td>
+</tr>
+<tr style="background:#CCD1E5;">
+<td style="font-weight:bold;font-size:11px;text-align:center;">Total</td>
+<td style="font-weight:bold;font-size:11px;text-align:center;">Disponibles</td>
+<td style="font-weight:bold;font-size:11px;text-align:center;">Reservadas</td>
+</tr>
+<tr class="resultadosRowPar">
+<td style="font-size:13px;text-align:center;">14139</td>
+<td style="font-size:13px;text-align:left;" class="tooltipInfoCurso" rel="informacionCurso.ajax.php?semestre=2016-2&sigla=MAT1610&seccion=1" title="MAT1610 Cálculo I"><div style="min-width:88px;margin-left:5px"><img src="fotos/info.png" height="18" width="18" alt="Info" style="vertical-align:text-bottom" /> MAT1610</div></td>
+<td style="font-size:13px;text-align:center;width:5px;"> SI </td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="font-size:13px;text-align:center;">1</td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="width:10px;text-align:left;">
+</td>
+<td style="font-size:13px;text-align:left;">Cálculo I</td>
+<td style="font-size:13px;text-align:left;"><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Da+Silva+Jairo#resultados" title="Ver todos los cursos de Da Silva Jairo">Da Silva Jairo</a>, <br /><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Cortes+Victor#resultados" title="Ver todos los cursos de Cortes Victor">Cortes Victor</a></td>
+<td style="font-size:13px;text-align:left;">San Joaqu&iacute;n</td>
+<td style="font-size:13px;text-align:center;">10</td>
+<td style="font-size:13px;text-align:center;">80</td>
+<td style="font-size:13px;text-align:center;">19</td>
+<td style="font-size:13px;text-align:center;"><a href="javascript:;" onclick="javascript:test('./informacionVacReserva.ajax.php?nrc=14139&termcode=2016-2&cantidad_dis=19&cantidad_min=80&cantidad_ocu=61&nombre=C%E1lculo+I&sigla=MAT1610&seccion=1');"><img src="fotos/search.png" alt="Ver detalle" style="width:16px;height:16px;border:0;"></a></td>
+<td style="text-align:left;">
+<table>
+<tr>
+<td style="padding-right:5px;width:50px">
+L-W-V:4
+</td>
+<td style="padding-right:5px">
+CLAS
+</td>
+<td>
+A5
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:5
+</td>
+<td style="padding-right:5px">
+LAB
+</td>
+<td>
+SIN SALA
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:6
+</td>
+<td style="padding-right:5px">
+AYU
+</td>
+<td>
+B11
+</td>
+</tr>
+</table>
+</td>
+<td style="font-size:13px;text-align:center;"><a href="#top" onclick="javascript:ajaxpage('miHorario.inc.php?accion=add&sigla=MAT1610&seccion=1', 'divMiHorario'); goToAnchor('top');" style="font-size:10px"><img src="fotos/add.png" width="18" height="15" alt="Agregar a mi horario" longdesc="Agregar a mi horario" style="vertical-align:text-bottom" /></a></td>
+</tr>
+<tr class="resultadosRowImpar">
+<td style="font-size:13px;text-align:center;">14143</td>
+<td style="font-size:13px;text-align:left;" class="tooltipInfoCurso" rel="informacionCurso.ajax.php?semestre=2016-2&sigla=MAT1610&seccion=2" title="MAT1610 Cálculo I"><div style="min-width:88px;margin-left:5px"><img src="fotos/info.png" height="18" width="18" alt="Info" style="vertical-align:text-bottom" /> MAT1610</div></td>
+<td style="font-size:13px;text-align:center;width:5px;"> SI </td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="font-size:13px;text-align:center;">2</td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="width:10px;text-align:left;">
+</td>
+<td style="font-size:13px;text-align:left;">Cálculo I</td>
+<td style="font-size:13px;text-align:left;"><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Da+Silva+Jairo#resultados" title="Ver todos los cursos de Da Silva Jairo">Da Silva Jairo</a>, <br /><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Cortes+Victor#resultados" title="Ver todos los cursos de Cortes Victor">Cortes Victor</a></td>
+<td style="font-size:13px;text-align:left;">San Joaqu&iacute;n</td>
+<td style="font-size:13px;text-align:center;">10</td>
+<td style="font-size:13px;text-align:center;">80</td>
+<td style="font-size:13px;text-align:center;">45</td>
+<td style="font-size:13px;text-align:center;"><a href="javascript:;" onclick="javascript:test('./informacionVacReserva.ajax.php?nrc=14143&termcode=2016-2&cantidad_dis=45&cantidad_min=80&cantidad_ocu=35&nombre=C%E1lculo+I&sigla=MAT1610&seccion=2');"><img src="fotos/search.png" alt="Ver detalle" style="width:16px;height:16px;border:0;"></a></td>
+<td style="text-align:left;">
+<table>
+<tr>
+<td style="padding-right:5px;width:50px">
+L-W-V:4
+</td>
+<td style="padding-right:5px">
+CLAS
+</td>
+<td>
+A5
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:5
+</td>
+<td style="padding-right:5px">
+LAB
+</td>
+<td>
+SIN SALA
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:6
+</td>
+<td style="padding-right:5px">
+AYU
+</td>
+<td>
+A7
+</td>
+</tr>
+</table>
+</td>
+<td style="font-size:13px;text-align:center;"><a href="#top" onclick="javascript:ajaxpage('miHorario.inc.php?accion=add&sigla=MAT1610&seccion=2', 'divMiHorario'); goToAnchor('top');" style="font-size:10px"><img src="fotos/add.png" width="18" height="15" alt="Agregar a mi horario" longdesc="Agregar a mi horario" style="vertical-align:text-bottom" /></a></td>
+</tr>
+<tr class="resultadosRowPar">
+<td style="font-size:13px;text-align:center;">14130</td>
+<td style="font-size:13px;text-align:left;" class="tooltipInfoCurso" rel="informacionCurso.ajax.php?semestre=2016-2&sigla=MAT1610&seccion=3" title="MAT1610 Cálculo I"><div style="min-width:88px;margin-left:5px"><img src="fotos/info.png" height="18" width="18" alt="Info" style="vertical-align:text-bottom" /> MAT1610</div></td>
+<td style="font-size:13px;text-align:center;width:5px;"> SI </td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="font-size:13px;text-align:center;">3</td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="width:10px;text-align:left;">
+</td>
+<td style="font-size:13px;text-align:left;">Cálculo I</td>
+<td style="font-size:13px;text-align:left;"><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Torres+Jose#resultados" title="Ver todos los cursos de Torres Jose">Torres Jose</a>, <br /><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Cortes+Victor#resultados" title="Ver todos los cursos de Cortes Victor">Cortes Victor</a></td>
+<td style="font-size:13px;text-align:left;">San Joaqu&iacute;n</td>
+<td style="font-size:13px;text-align:center;">10</td>
+<td style="font-size:13px;text-align:center;">80</td>
+<td style="font-size:13px;text-align:center;">0</td>
+<td style="font-size:13px;text-align:center;"><a href="javascript:;" onclick="javascript:test('./informacionVacReserva.ajax.php?nrc=14130&termcode=2016-2&cantidad_dis=0&cantidad_min=80&cantidad_ocu=80&nombre=C%E1lculo+I&sigla=MAT1610&seccion=3');"><img src="fotos/search.png" alt="Ver detalle" style="width:16px;height:16px;border:0;"></a></td>
+<td style="text-align:left;">
+<table>
+<tr>
+<td style="padding-right:5px;width:50px">
+L-W-V:4
+</td>
+<td style="padding-right:5px">
+CLAS
+</td>
+<td>
+A3
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:5
+</td>
+<td style="padding-right:5px">
+AYU
+</td>
+<td>
+B24
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:6
+</td>
+<td style="padding-right:5px">
+LAB
+</td>
+<td>
+SIN SALA
+</td>
+</tr>
+</table>
+</td>
+<td style="font-size:13px;text-align:center;"><a href="#top" onclick="javascript:ajaxpage('miHorario.inc.php?accion=add&sigla=MAT1610&seccion=3', 'divMiHorario'); goToAnchor('top');" style="font-size:10px"><img src="fotos/add.png" width="18" height="15" alt="Agregar a mi horario" longdesc="Agregar a mi horario" style="vertical-align:text-bottom" /></a></td>
+</tr>
+<tr class="resultadosRowImpar">
+<td style="font-size:13px;text-align:center;">14126</td>
+<td style="font-size:13px;text-align:left;" class="tooltipInfoCurso" rel="informacionCurso.ajax.php?semestre=2016-2&sigla=MAT1610&seccion=4" title="MAT1610 Cálculo I"><div style="min-width:88px;margin-left:5px"><img src="fotos/info.png" height="18" width="18" alt="Info" style="vertical-align:text-bottom" /> MAT1610</div></td>
+<td style="font-size:13px;text-align:center;width:5px;"> SI </td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="font-size:13px;text-align:center;">4</td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="width:10px;text-align:left;">
+</td>
+<td style="font-size:13px;text-align:left;">Cálculo I</td>
+<td style="font-size:13px;text-align:left;"><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Torres+Jose#resultados" title="Ver todos los cursos de Torres Jose">Torres Jose</a>, <br /><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Cortes+Victor#resultados" title="Ver todos los cursos de Cortes Victor">Cortes Victor</a></td>
+<td style="font-size:13px;text-align:left;">San Joaqu&iacute;n</td>
+<td style="font-size:13px;text-align:center;">10</td>
+<td style="font-size:13px;text-align:center;">80</td>
+<td style="font-size:13px;text-align:center;">15</td>
+<td style="font-size:13px;text-align:center;"><a href="javascript:;" onclick="javascript:test('./informacionVacReserva.ajax.php?nrc=14126&termcode=2016-2&cantidad_dis=15&cantidad_min=80&cantidad_ocu=65&nombre=C%E1lculo+I&sigla=MAT1610&seccion=4');"><img src="fotos/search.png" alt="Ver detalle" style="width:16px;height:16px;border:0;"></a></td>
+<td style="text-align:left;">
+<table>
+<tr>
+<td style="padding-right:5px;width:50px">
+L-W-V:4
+</td>
+<td style="padding-right:5px">
+CLAS
+</td>
+<td>
+A3
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:5
+</td>
+<td style="padding-right:5px">
+AYU
+</td>
+<td>
+B18
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:6
+</td>
+<td style="padding-right:5px">
+LAB
+</td>
+<td>
+SIN SALA
+</td>
+</tr>
+</table>
+</td>
+<td style="font-size:13px;text-align:center;"><a href="#top" onclick="javascript:ajaxpage('miHorario.inc.php?accion=add&sigla=MAT1610&seccion=4', 'divMiHorario'); goToAnchor('top');" style="font-size:10px"><img src="fotos/add.png" width="18" height="15" alt="Agregar a mi horario" longdesc="Agregar a mi horario" style="vertical-align:text-bottom" /></a></td>
+</tr>
+<tr class="resultadosRowPar">
+<td style="font-size:13px;text-align:center;">14147</td>
+<td style="font-size:13px;text-align:left;" class="tooltipInfoCurso" rel="informacionCurso.ajax.php?semestre=2016-2&sigla=MAT1610&seccion=5" title="MAT1610 Cálculo I"><div style="min-width:88px;margin-left:5px"><img src="fotos/info.png" height="18" width="18" alt="Info" style="vertical-align:text-bottom" /> MAT1610</div></td>
+<td style="font-size:13px;text-align:center;width:5px;"> SI </td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="font-size:13px;text-align:center;">5</td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="width:10px;text-align:left;">
+</td>
+<td style="font-size:13px;text-align:left;">Cálculo I</td>
+<td style="font-size:13px;text-align:left;"><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Heuer+Norbert#resultados" title="Ver todos los cursos de Heuer Norbert">Heuer Norbert</a>, <br /><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Cortes+Victor#resultados" title="Ver todos los cursos de Cortes Victor">Cortes Victor</a></td>
+<td style="font-size:13px;text-align:left;">San Joaqu&iacute;n</td>
+<td style="font-size:13px;text-align:center;">10</td>
+<td style="font-size:13px;text-align:center;">80</td>
+<td style="font-size:13px;text-align:center;">25</td>
+<td style="font-size:13px;text-align:center;"><a href="javascript:;" onclick="javascript:test('./informacionVacReserva.ajax.php?nrc=14147&termcode=2016-2&cantidad_dis=25&cantidad_min=80&cantidad_ocu=55&nombre=C%E1lculo+I&sigla=MAT1610&seccion=5');"><img src="fotos/search.png" alt="Ver detalle" style="width:16px;height:16px;border:0;"></a></td>
+<td style="text-align:left;">
+<table>
+<tr>
+<td style="padding-right:5px;width:50px">
+L-W-V:4
+</td>
+<td style="padding-right:5px">
+CLAS
+</td>
+<td>
+A7
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:5
+</td>
+<td style="padding-right:5px">
+LAB
+</td>
+<td>
+SIN SALA
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:6
+</td>
+<td style="padding-right:5px">
+AYU
+</td>
+<td>
+CS202
+</td>
+</tr>
+</table>
+</td>
+<td style="font-size:13px;text-align:center;"><a href="#top" onclick="javascript:ajaxpage('miHorario.inc.php?accion=add&sigla=MAT1610&seccion=5', 'divMiHorario'); goToAnchor('top');" style="font-size:10px"><img src="fotos/add.png" width="18" height="15" alt="Agregar a mi horario" longdesc="Agregar a mi horario" style="vertical-align:text-bottom" /></a></td>
+</tr>
+<tr class="resultadosRowImpar">
+<td style="font-size:13px;text-align:center;">14151</td>
+<td style="font-size:13px;text-align:left;" class="tooltipInfoCurso" rel="informacionCurso.ajax.php?semestre=2016-2&sigla=MAT1610&seccion=6" title="MAT1610 Cálculo I"><div style="min-width:88px;margin-left:5px"><img src="fotos/info.png" height="18" width="18" alt="Info" style="vertical-align:text-bottom" /> MAT1610</div></td>
+<td style="font-size:13px;text-align:center;width:5px;"> SI </td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="font-size:13px;text-align:center;">6</td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="width:10px;text-align:left;">
+</td>
+<td style="font-size:13px;text-align:left;">Cálculo I</td>
+<td style="font-size:13px;text-align:left;"><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Heuer+Norbert#resultados" title="Ver todos los cursos de Heuer Norbert">Heuer Norbert</a>, <br /><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Cortes+Victor#resultados" title="Ver todos los cursos de Cortes Victor">Cortes Victor</a></td>
+<td style="font-size:13px;text-align:left;">San Joaqu&iacute;n</td>
+<td style="font-size:13px;text-align:center;">10</td>
+<td style="font-size:13px;text-align:center;">80</td>
+<td style="font-size:13px;text-align:center;">46</td>
+<td style="font-size:13px;text-align:center;"><a href="javascript:;" onclick="javascript:test('./informacionVacReserva.ajax.php?nrc=14151&termcode=2016-2&cantidad_dis=46&cantidad_min=80&cantidad_ocu=34&nombre=C%E1lculo+I&sigla=MAT1610&seccion=6');"><img src="fotos/search.png" alt="Ver detalle" style="width:16px;height:16px;border:0;"></a></td>
+<td style="text-align:left;">
+<table>
+<tr>
+<td style="padding-right:5px;width:50px">
+L-W-V:4
+</td>
+<td style="padding-right:5px">
+CLAS
+</td>
+<td>
+A7
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:5
+</td>
+<td style="padding-right:5px">
+LAB
+</td>
+<td>
+SIN SALA
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:6
+</td>
+<td style="padding-right:5px">
+AYU
+</td>
+<td>
+CS301
+</td>
+</tr>
+</table>
+</td>
+<td style="font-size:13px;text-align:center;"><a href="#top" onclick="javascript:ajaxpage('miHorario.inc.php?accion=add&sigla=MAT1610&seccion=6', 'divMiHorario'); goToAnchor('top');" style="font-size:10px"><img src="fotos/add.png" width="18" height="15" alt="Agregar a mi horario" longdesc="Agregar a mi horario" style="vertical-align:text-bottom" /></a></td>
+</tr>
+<tr class="resultadosRowPar">
+<td style="font-size:13px;text-align:center;">14135</td>
+<td style="font-size:13px;text-align:left;" class="tooltipInfoCurso" rel="informacionCurso.ajax.php?semestre=2016-2&sigla=MAT1610&seccion=7" title="MAT1610 Cálculo I"><div style="min-width:88px;margin-left:5px"><img src="fotos/info.png" height="18" width="18" alt="Info" style="vertical-align:text-bottom" /> MAT1610</div></td>
+<td style="font-size:13px;text-align:center;width:5px;"> SI </td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="font-size:13px;text-align:center;">7</td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="width:10px;text-align:left;">
+</td>
+<td style="font-size:13px;text-align:left;">Cálculo I</td>
+<td style="font-size:13px;text-align:left;"><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Rubio+Rodrigo#resultados" title="Ver todos los cursos de Rubio Rodrigo">Rubio Rodrigo</a>, <br /><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Cortes+Victor#resultados" title="Ver todos los cursos de Cortes Victor">Cortes Victor</a></td>
+<td style="font-size:13px;text-align:left;">San Joaqu&iacute;n</td>
+<td style="font-size:13px;text-align:center;">10</td>
+<td style="font-size:13px;text-align:center;">80</td>
+<td style="font-size:13px;text-align:center;">0</td>
+<td style="font-size:13px;text-align:center;"><a href="javascript:;" onclick="javascript:test('./informacionVacReserva.ajax.php?nrc=14135&termcode=2016-2&cantidad_dis=0&cantidad_min=80&cantidad_ocu=80&nombre=C%E1lculo+I&sigla=MAT1610&seccion=7');"><img src="fotos/search.png" alt="Ver detalle" style="width:16px;height:16px;border:0;"></a></td>
+<td style="text-align:left;">
+<table>
+<tr>
+<td style="padding-right:5px;width:50px">
+L-W-V:4
+</td>
+<td style="padding-right:5px">
+CLAS
+</td>
+<td>
+A1
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:5
+</td>
+<td style="padding-right:5px">
+AYU
+</td>
+<td>
+B25
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:6
+</td>
+<td style="padding-right:5px">
+LAB
+</td>
+<td>
+SIN SALA
+</td>
+</tr>
+</table>
+</td>
+<td style="font-size:13px;text-align:center;"><a href="#top" onclick="javascript:ajaxpage('miHorario.inc.php?accion=add&sigla=MAT1610&seccion=7', 'divMiHorario'); goToAnchor('top');" style="font-size:10px"><img src="fotos/add.png" width="18" height="15" alt="Agregar a mi horario" longdesc="Agregar a mi horario" style="vertical-align:text-bottom" /></a></td>
+</tr>
+<tr class="resultadosRowImpar">
+<td style="font-size:13px;text-align:center;">14122</td>
+<td style="font-size:13px;text-align:left;" class="tooltipInfoCurso" rel="informacionCurso.ajax.php?semestre=2016-2&sigla=MAT1610&seccion=8" title="MAT1610 Cálculo I"><div style="min-width:88px;margin-left:5px"><img src="fotos/info.png" height="18" width="18" alt="Info" style="vertical-align:text-bottom" /> MAT1610</div></td>
+<td style="font-size:13px;text-align:center;width:5px;"> SI </td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="font-size:13px;text-align:center;">8</td>
+<td style="font-size:13px;text-align:center;width:5px;">NO</td>
+<td style="width:10px;text-align:left;">
+</td>
+<td style="font-size:13px;text-align:left;">Cálculo I</td>
+<td style="font-size:13px;text-align:left;"><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Rubio+Rodrigo#resultados" title="Ver todos los cursos de Rubio Rodrigo">Rubio Rodrigo</a>, <br /><a href="?cxml_semestre=2016-2&amp;cxml_profesor=Cortes+Victor#resultados" title="Ver todos los cursos de Cortes Victor">Cortes Victor</a></td>
+<td style="font-size:13px;text-align:left;">San Joaqu&iacute;n</td>
+<td style="font-size:13px;text-align:center;">10</td>
+<td style="font-size:13px;text-align:center;">80</td>
+<td style="font-size:13px;text-align:center;">0</td>
+<td style="font-size:13px;text-align:center;"><a href="javascript:;" onclick="javascript:test('./informacionVacReserva.ajax.php?nrc=14122&termcode=2016-2&cantidad_dis=0&cantidad_min=80&cantidad_ocu=80&nombre=C%E1lculo+I&sigla=MAT1610&seccion=8');"><img src="fotos/search.png" alt="Ver detalle" style="width:16px;height:16px;border:0;"></a></td>
+<td style="text-align:left;">
+<table>
+<tr>
+<td style="padding-right:5px;width:50px">
+L-W-V:4
+</td>
+<td style="padding-right:5px">
+CLAS
+</td>
+<td>
+A1
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:5
+</td>
+<td style="padding-right:5px">
+AYU
+</td>
+<td>
+B17
+</td>
+</tr>
+<tr>
+<td style="padding-right:5px;width:50px">
+L:6
+</td>
+<td style="padding-right:5px">
+LAB
+</td>
+<td>
+SIN SALA
+</td>
+</tr>
+</table>
+</td>
+<td style="font-size:13px;text-align:center;"><a href="#top" onclick="javascript:ajaxpage('miHorario.inc.php?accion=add&sigla=MAT1610&seccion=8', 'divMiHorario'); goToAnchor('top');" style="font-size:10px"><img src="fotos/add.png" width="18" height="15" alt="Agregar a mi horario" longdesc="Agregar a mi horario" style="vertical-align:text-bottom" /></a></td>
+</tr>
+</table>
+
+	</div>
+
+
+
+								<div style="border:1px solid #BAC0E4; border-bottom:0px; border-top:0px; background:#F1F8FD;padding-bottom:20px;text-align:center">
+
+								<!-- Se  comenta lina  para ocultar el video explicativo -->
+								<!--	<img src="fotos/help.png" width="18" height="18" style="vertical-align:middle" /> -->
+								<!--	<a href="http://www.youtube.com/watch?v=nVIprIu8DJo" target="_blank">Ver video explicativo de cómo utilizar correctamente el Buscador de Cursos UC</a>. -->
+
+								</div>
+
+								<div id="footer">
+									&copy; 2016 <a href="http://www.uc.cl" target="_blank" class="blanco">Pontificia Universidad Católica de Chile</a>,
+									<a href="http://www.uc.cl/informatica" target="_blank" class="blanco">Dirección de Informática UC</a> y
+									<a href="http://www.felipebrahm.com?buscacursos" target="_blank" class="blanco">Felipe Brahm</a>.
+
+									<div style="margin-top:2px">
+										Nuestro agradecimiento a los alumnos <a href="http://www.felipebrahm.com?buscacursos" class="blanco">Felipe Brahm</a> y Sergio Campamá por su aporte a la Universidad a través de la creación de este sistema.
+									</div>
+									<!--Para dudas, sugerencias o notificación de errores <a href="http://www.felipebrahm.com/contacto.php" target="_blank">por favor contactarse con los desarrolladores de la aplicación</a>.-->
+								</div>
+
+							</div> <!-- fin centro -->
+
+						</div> <!-- fin align center -->
+
+				</div> <!-- fin wrapper -->
+
+			</td>
+
+		</tr>
+
+	</table>
+
+		<script type="text/javascript">
+
+			//información de curso
+			$('td.tooltipInfoCurso').cluetip({
+				cluetipClass: 'jtip',
+				arrows: true,
+				dropShadow: false,
+				hoverIntent: true,
+				sticky: true,
+				mouseOutClose: true,
+				closePosition: 'title',
+				closeText: '<img src="fotos/cluetip/cross.png" alt="close" />',
+				positionBy: 'fixed',
+				leftOffset: 2,
+				//topOffset: 8,
+				topOffset: -65,
+				width: 839
+			});
+
+
+		</script>
+
+</body>
+
+</html>

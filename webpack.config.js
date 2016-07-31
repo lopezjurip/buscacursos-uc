@@ -7,7 +7,7 @@ var config = {
     ]
   },
   output: {
-    library: 'MyLibrary',
+    library: 'BuscacursosUC',
     libraryTarget: 'umd'
   },
   plugins: [
