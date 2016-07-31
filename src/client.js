@@ -72,7 +72,7 @@ export default class BuscaCursosClient {
       .then($document => this.processCourses($document, params));
   }
 
-  getInformation({ year, period, initials, section }, options = {}) {
+  getInformation({ year, period, initials, section }) {
     return this.requestInformation({ year, period, initials, section })
       .then(html => this.parse(html))
       .then($document => this.processInformation($document));
@@ -84,7 +84,7 @@ export default class BuscaCursosClient {
     .then($document => this.processRequisites($document));
   }
 
-  processCourses($document, params = {}, options = {}) {
+  processCourses($document, params = {}) {
     const { sanitizer, $ } = this;
 
     const $last = $document.find('body > div:nth-child(9) > table').first();
@@ -118,7 +118,7 @@ export default class BuscaCursosClient {
     return entities;
   }
 
-  processRow($row, params = {}, options = {}) {
+  processRow($row, params = {}) {
     const { sanitizer } = this;
 
     const $columns = $row.children('td');
@@ -218,7 +218,7 @@ export default class BuscaCursosClient {
     });
   }
 
-  processInformation($document, options = {}) {
+  processInformation($document) {
     const $info = $document.find('div > div:nth-child(1) > div:nth-child(1)');
     return this.sanitizer.text($info);
   }
