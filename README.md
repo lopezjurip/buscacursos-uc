@@ -203,6 +203,14 @@ The results are from page of at most 50 courses. The `Promise` returns an array 
 }
 ```
 
+## Build
+
+To 'transpile' the code and prepare the release:
+
+```sh
+npm run build && npm run build:umd && npm run build build:umd:min
+```
+
 ## Testing
 
 Clone the project and run:
