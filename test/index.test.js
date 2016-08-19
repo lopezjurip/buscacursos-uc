@@ -1,29 +1,28 @@
-/* eslint prefer-arrow-callback: 0, arrow-body-style: 0  */
+/* eslint prefer-arrow-callback: 0, arrow-body-style: 0, import/no-extraneous-dependencies: 0  */
 
 import { expect } from 'chai';
 import cheerio from 'cheerio';
 import fs from 'mz/fs';
+import fetch from 'node-fetch';
 
 import buscacursos from '../src';
-import fetch from 'node-fetch';
 
 const baseUrl = 'http://buscacursos.uc.cl';
 
 const createInstance = () => buscacursos({ baseUrl, fetch, $: cheerio });
 const readFile = (path) => fs.readFile(path, 'utf-8');
 
-// console.log(JSON.stringify(result, null, 4));
+const QUERY = {
+  'cxml_semestre': '2016-2',
+  'cxml_sigla': 'FIS0151',
+};
 
 describe('loading content', function () {
   this.timeout(5000);
 
   it('should request the html as string', function () {
     const client = createInstance();
-    const query = {
-      'cxml_semestre': '2016-2',
-      'cxml_sigla': 'FIS0151',
-    };
-    return client.requestCourses(query);
+    return client.requestCourses(QUERY);
   });
 
   it('should parse a valid html', function () {
@@ -53,11 +52,10 @@ describe('loading content', function () {
 
   it('should get courses by query', function () {
     const client = createInstance();
-    const query = {
-      'cxml_semestre': '2016-2',
-      'cxml_sigla': 'FIS0151',
-    };
-    return client.getCourses(query);
+    return client.getCourses(QUERY).then(result => {
+      console.log(JSON.stringify(result, null, 4));
+      return result;
+    });
   });
 
   it('should get information as string', function () {
@@ -93,5 +91,28 @@ describe('loading content', function () {
       // console.log(JSON.stringify(requisites, null, 4));
       return requisites;
     });
+  });
+
+  it('should make the example work', function () {
+    const client = createInstance();
+    const query = {
+      'cxml_semestre': '2016-2',
+      'cxml_sigla': 'ICS2613',
+    };
+
+    return client.getCourses(query)
+      .then(courses => {
+        const promises = courses.map(course => {
+          return Promise.all([
+            client.getInformation(course).then(information => Object.assign(course, { information })),
+            client.getRequisites(course).then(requisites => Object.assign(course, { requisites })),
+          ]).then(() => course).catch(() => course);
+        });
+        return Promise.all(promises);
+      })
+      .then(courses => {
+        // console.log(JSON.stringify(courses[0], null, 4));
+        return courses;
+      });
   });
 });

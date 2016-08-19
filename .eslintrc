@@ -4,7 +4,8 @@
   "rules": {
     "strict": 0,
     "func-names": 0,
-    "quotes": [2, "single"]
+    "quotes": [2, "single"],
+    "quote-props": 0
   },
   "env": {
     "browser": true,

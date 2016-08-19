@@ -78,10 +78,10 @@ export default class BuscaCursosClient {
       .then($document => this.processInformation($document));
   }
 
-  getRequisites(course) {
-    return this.requestRequisites(course)
-    .then(html => this.parse(html))
-    .then($document => this.processRequisites($document));
+  getRequisites({ initials }) {
+    return this.requestRequisites({ initials })
+      .then(html => this.parse(html))
+      .then($document => this.processRequisites($document));
   }
 
   processCourses($document, params = {}) {
