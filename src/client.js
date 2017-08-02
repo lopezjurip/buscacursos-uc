@@ -1,13 +1,12 @@
-import { stringify } from 'qs';
-import merge from 'lodash/merge';
-import transform from 'lodash/transform';
-import trim from 'lodash/trim';
-import split from 'lodash/split';
-import startsWith from 'lodash/startsWith';
-import endsWith from 'lodash/endsWith';
+import { stringify } from "qs";
+import merge from "lodash/merge";
+import transform from "lodash/transform";
+import trim from "lodash/trim";
+import split from "lodash/split";
+import startsWith from "lodash/startsWith";
+import endsWith from "lodash/endsWith";
 
-import Sanitizer from './sanitizer';
-
+import Sanitizer from "./sanitizer";
 
 export default class BuscaCursosClient {
   constructor(baseUrl, fetch, $) {
@@ -22,15 +21,15 @@ export default class BuscaCursosClient {
     if (options.load) {
       return options.load(html);
     }
-    return this.$('<div/>').html(html).contents();
+    return this.$("<div/>").html(html).contents();
   }
 
   request(url, query, options) {
     const querystring = stringify(query);
     const fetch = this.fetch;
     return fetch(`${url}?${querystring}`, {
-      method: 'GET',
-      mode: 'no-cors',
+      method: "GET",
+      mode: "no-cors",
       ...options,
     }).then(response => response.text());
   }
@@ -51,12 +50,12 @@ export default class BuscaCursosClient {
 
   requestRequisites({ initials }, options = {}) {
     const query = {
-      tmpl: 'component',
-      option: 'com_catalogo',
-      view: 'requisitos',
+      tmpl: "component",
+      option: "com_catalogo",
+      view: "requisitos",
       sigla: initials,
     };
-    const url = 'http://catalogo.uc.cl/index.php';
+    const url = "http://catalogo.uc.cl/index.php";
     return this.request(url, query, options);
   }
 
@@ -87,12 +86,12 @@ export default class BuscaCursosClient {
   processCourses($document, params = {}) {
     const { sanitizer, $ } = this;
 
-    const $last = $document.find('body > div:nth-child(9) > table').first();
+    const $last = $document.find("body > div:nth-child(9) > table").first();
 
     // Empty results
     if ($last.length === 0) return [];
 
-    const $table = $last.children('tr');
+    const $table = $last.children("tr");
 
     let school = null;
     const entities = [];
@@ -101,15 +100,15 @@ export default class BuscaCursosClient {
       const $row = $(element);
 
       // Check if this row is a course entity
-      if ($row.hasClass('resultadosRowImpar') || $row.hasClass('resultadosRowPar')) {
+      if ($row.hasClass("resultadosRowImpar") || $row.hasClass("resultadosRowPar")) {
         const entity = this.processRow($row, { ...params, school });
         entities.push(entity);
 
-      // Check the number of children to determine if this is the academic school or info headers
+        // Check the number of children to determine if this is the academic school or info headers
       } else if ($row.children().length === 1) {
-        school = sanitizer.text($row.find('td').first());
+        school = sanitizer.text($row.find("td").first());
 
-      // this row has table "headers"
+        // this row has table "headers"
       } else {
         // TODO: get values
       }
@@ -121,7 +120,7 @@ export default class BuscaCursosClient {
   processRow($row, params = {}) {
     const { sanitizer } = this;
 
-    const $columns = $row.children('td');
+    const $columns = $row.children("td");
 
     const NRC = sanitizer.text($columns.eq(0));
     const initials = sanitizer.text($columns.eq(1));
@@ -167,9 +166,9 @@ export default class BuscaCursosClient {
     const normalized = {};
     const raw = [];
 
-    const $rows = $schedule.find('table').first().find('tr');
+    const $rows = $schedule.find("table").first().find("tr");
     $rows.each((index, element) => {
-      const $columns = $(element).children('td');
+      const $columns = $(element).children("td");
 
       const type = sanitizer.text($columns.eq(1));
       const when = sanitizer.text($columns.eq(0));
@@ -177,25 +176,38 @@ export default class BuscaCursosClient {
 
       raw.push({ type, when, where });
 
-      const [days, hours] = when.split(':').map(part => split(part, /[,-]+/));
+      const [days, hours] = when.split(":").map(part => split(part, /[,-]+/));
 
       // See: https://lodash.com/docs#transform
-      const updater = transform(days, (daysAccumulator, day) => {
+      const updater = transform(
+        days,
+        (daysAccumulator, day) => {
         daysAccumulator[day] = transform(hours, (hoursAccumulator, hour) => { // eslint-disable-line
           hoursAccumulator[hour] = { type, classroom: where, campus: campus }; // eslint-disable-line
-        }, {});
-      }, {});
+            },
+            {}
+          );
+        },
+        {}
+      );
 
       merge(normalized, updater); // this mutates 'normalized'
     });
 
     // See: https://lodash.com/docs#transform
-    const schematic = transform(normalized, (accumulator, hours, day) => ( // hours is an object
-      accumulator.push({
-        day,
-        hours: transform(hours, (acc, module, hour) => acc.push({ hour, module }), []),
-      })
-    ), []);
+    const schematic = transform(
+      normalized,
+      (
+        accumulator,
+        hours,
+        day // hours is an object
+      ) =>
+        accumulator.push({
+          day,
+          hours: transform(hours, (acc, module, hour) => acc.push({ hour, module }), []),
+        }),
+      []
+    );
 
     return { raw, schematic, normalized };
   }
@@ -203,7 +215,7 @@ export default class BuscaCursosClient {
   processTeacher($teacher, { year, period, initials, section }) {
     const { sanitizer } = this;
 
-    return sanitizer.text($teacher).split(',').map(trim).map(name => {
+    return sanitizer.text($teacher).split(",").map(trim).map(name => {
       const querystring = stringify({
         nombre: name,
         semestre: `${year}-${period}`,
@@ -219,52 +231,51 @@ export default class BuscaCursosClient {
   }
 
   processInformation($document) {
-    const $info = $document.find('div > div:nth-child(1) > div:nth-child(1)');
+    const $info = $document.find("div > div:nth-child(1) > div:nth-child(1)");
     return this.sanitizer.text($info);
   }
 
   processRequisites($document) {
     const { sanitizer, $ } = this;
 
-    const $contentpane = $document.find('body > div.contentpane');
-    const $pre = $contentpane.find('div:nth-child(2) > table').first();
-    const $eq = $contentpane.find('div:nth-child(4) > table').first();
+    const $contentpane = $document.find("body > div.contentpane");
+    const $pre = $contentpane.find("div:nth-child(2) > table").first();
+    const $eq = $contentpane.find("div:nth-child(4) > table").first();
 
     const pre = [];
-    $pre.children('tr').each((index, element) => {
+    $pre.children("tr").each((index, element) => {
       const $tr = $(element);
-      const $td = $tr.find('td:nth-child(2)');
+      const $td = $tr.find("td:nth-child(2)");
       pre.push(sanitizer.text($td));
     });
 
     const eq = [];
-    $eq.children('tr').each((index, element) => {
+    $eq.children("tr").each((index, element) => {
       const $tr = $(element);
-      const $td = $tr.find('td:nth-child(2)');
+      const $td = $tr.find("td:nth-child(2)");
       eq.push(sanitizer.text($td));
     });
 
     return {
       raw: [pre, eq],
-      // requisites: requisites(pre[0]),
-      // relations: relations(pre[1]),
-      // restrictions: restrictions(pre[2]),
-      // equivalences: equivalences(eq[0]),
+      requisites: requisites(pre[0]),
+      relations: relations(pre[1]),
+      restrictions: restrictions(pre[2]),
+      equivalences: equivalences(eq[0]),
     };
   }
 }
 
-
 function removeParenthesis(string) {
-  if (startsWith(string, '(') && endsWith(string, ')')) {
+  if (startsWith(string, "(") && endsWith(string, ")")) {
     return string.substring(1, string.length - 1);
   }
   return string;
 }
 
 function forceRemoveParenthesis(string) {
-  const start = startsWith(string, '(') ? 1 : 0;
-  const end = endsWith(string, ')') ? string.length - 1 : string.length;
+  const start = startsWith(string, "(") ? 1 : 0;
+  const end = endsWith(string, ")") ? string.length - 1 : string.length;
   return string.substring(start, end);
 }
 
@@ -274,36 +285,43 @@ function requisites(string) {
   // (FIS1503 y MAT1203) o (MAT1202 y MAT1620(c)) o (FIS1513(c) y MAT1512(c)) o FIS1513(c) o ICE1513(c)
   // BIO149E y ENF2201 y ENF2205 y EYP1086 y (MEB203B o MED821)
 
-  const ors = string.split('o').map(trim).map(s => removeParenthesis(s));
+  const ors = string.split("o").map(trim).map(s => removeParenthesis(s));
   // ['FIS1503 y MAT1203', 'MAT1202 y MAT1620(c)', 'FIS1513(c) y MAT1512(c)', 'FIS1513(c)', 'ICE1513(c)']
 
   return ors.map(or => {
-    const ands = or.split('y').map(trim);
+    const ands = or.split("y").map(trim);
     // [ 'FIS1503', 'MAT1203' ]
     // [ 'MAT1202', 'MAT1620(c)' ]
 
-    return transform(ands, (acc, initials) => {
-      if (initials.endsWith('(c)')) {
-        acc.corequisites.push(initials.slice(0, -3));
-      } else {
-        acc.prerequisites.push(initials);
-      }
-    }, { prerequisites: [], corequisites: [] });
+    return transform(
+      ands,
+      (acc, initials) => {
+        if (initials.endsWith("(c)")) {
+          acc.corequisites.push(initials.slice(0, -3));
+        } else {
+          acc.prerequisites.push(initials);
+        }
+      },
+      { prerequisites: [], corequisites: [] }
+    );
   });
 }
 
 function equivalences(string) {
   // (MAT1511 o MAT1516 o MAT1518 o MAT220E o MLM1120)
   if (!string) return [];
-  return string.replace(/[)(]/g, '').trim().split('o').map(trim);
+  return string.replace(/[)(]/g, "").trim().split("o").map(trim);
 }
 
 function relations(string) {
   if (!string) return null;
   switch (string.toLowerCase()) {
-    case 'o': return 'or';
-    case 'y': return 'and';
-    default: return null;
+    case "o":
+      return "or";
+    case "y":
+      return "and";
+    default:
+      return null;
   }
 }
 
@@ -319,9 +337,9 @@ function optionSplit(string, options) {
 
 function restrictions(string) {
   if (!string) return [];
-  const res = removeParenthesis(string).split(' o ').map(trim).map(s => forceRemoveParenthesis(s));
+  const res = removeParenthesis(string).split(" o ").map(trim).map(s => forceRemoveParenthesis(s));
   return res.map(s => {
-    const [type, value] = optionSplit(s, ['>=', '=']).map(trim);
+    const [type, value] = optionSplit(s, [">=", "="]).map(trim);
     return { type, value };
   });
 }

@@ -1,4 +1,4 @@
-import trim from 'lodash/trim';
+import trim from "lodash/trim";
 
 export default class Sanitizer {
   constructor($) {
@@ -19,6 +19,6 @@ export default class Sanitizer {
 
   boolean(node) {
     const value = this.text(node);
-    return value && value.toUpperCase() === 'SI';
+    return value && value.toUpperCase() === "SI";
   }
 }
