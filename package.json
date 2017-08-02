@@ -1,8 +1,15 @@
 {
   "name": "buscacursos-uc",
-  "version": "1.0.0",
-  "description": "Library Description",
+  "version": "3.1.0",
+  "description": "BuscaCursos UC Client",
   "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "lib",
+    "src",
+    "dist",
+    ".babelrc"
+  ],
   "scripts": {
     "build": "babel src --out-dir lib",
     "build:umd": "webpack src/index.js dist/buscacursos-uc.js",
@@ -16,7 +23,10 @@
     "type": "git",
     "url": "https://github.com/mrpatiwi/buscacursos-uc.git"
   },
-  "keywords": [],
+  "keywords": [
+    "uc",
+    "chile"
+  ],
   "author": "Patricio López Juri",
   "license": "MIT",
   "bugs": {

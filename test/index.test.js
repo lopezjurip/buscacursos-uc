@@ -13,8 +13,8 @@ const createInstance = () => buscacursos({ baseUrl, fetch, $: cheerio });
 const readFile = (path) => fs.readFile(path, 'utf-8');
 
 const QUERY = {
-  'cxml_semestre': '2016-2',
-  'cxml_sigla': 'FIS0151',
+  'cxml_semestre': '2017-2',
+  'cxml_sigla': 'INP3440',
 };
 
 describe('loading content', function () {
